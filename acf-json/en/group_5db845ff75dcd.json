@@ -215,13 +215,15 @@
                     "choices": {
                         "blue": "Blue",
                         "green": "Green",
+                        "red": "Red",
+                        "yellow": "Yellow",
                         "gray": "Gray"
                     },
-                    "default_value": [],
-                    "allow_null": 0,
-                    "multiple": 0,
-                    "ui": 0,
+                    "default_value": false,
                     "return_format": "value",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "ui": 0,
                     "ajax": 0,
                     "placeholder": ""
                 }
@@ -361,13 +363,15 @@
                     "choices": {
                         "blue": "Blue",
                         "green": "Green",
+                        "red": "Red",
+                        "yellow": "Yellow",
                         "gray": "Gray"
                     },
-                    "default_value": [],
-                    "allow_null": 0,
-                    "multiple": 0,
-                    "ui": 0,
+                    "default_value": false,
                     "return_format": "value",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "ui": 0,
                     "ajax": 0,
                     "placeholder": ""
                 }
@@ -507,13 +511,15 @@
                     "choices": {
                         "blue": "Blue",
                         "green": "Green",
+                        "red": "Red",
+                        "yellow": "Yellow",
                         "gray": "Gray"
                     },
-                    "default_value": [],
-                    "allow_null": 0,
-                    "multiple": 0,
-                    "ui": 0,
+                    "default_value": false,
                     "return_format": "value",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "ui": 0,
                     "ajax": 0,
                     "placeholder": ""
                 }
@@ -952,5 +958,5 @@
     "active": true,
     "description": "Front Page",
     "show_in_rest": 0,
-    "modified": 1698668014
+    "modified": 1698671105
 }

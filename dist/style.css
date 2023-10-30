@@ -4625,6 +4625,14 @@ input[type=range]::-ms-thumb {
   transition: opacity 0.3s ease-in-out;
 }
 
+.grid__item--yellow {
+  background-color: #D48E4E;
+}
+
+.grid__item--red {
+  background-color: #D6464E;
+}
+
 .grid__item--blue {
   background-color: #0E76CC;
 }
@@ -4635,19 +4643,6 @@ input[type=range]::-ms-thumb {
 
 .grid__item--gray {
   background-color: #162426;
-}
-
-.grid__item--blue .grid__mask {
-  background-color: #162426;
-}
-
-.grid__item--green .grid__mask {
-  background-color: #162426;
-  opacity: 1;
-}
-
-.grid__item--gray .grid__mask {
-  background-color: rgb(43, 49, 71);
 }
 
 .grid__item:hover .grid__mask {
@@ -4947,7 +4942,7 @@ input[type=range]::-ms-thumb {
   .block__header h1 strong,
   .block__header h1 em,
   .block__header h1 em span {
-    font-size: 3.5rem;
+    font-size: 4rem;
   }
   .block__header-search .input-search {
     font-size: 1.5rem !important;
