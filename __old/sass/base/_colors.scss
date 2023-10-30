@@ -1,0 +1,11 @@
+//Text color
+$color-main: #2b3147;
+$color-paint: #abcf38;
+$color-light: #cccdd2;
+a,
+a:hover,
+a:visited,
+a:active,
+a:link {
+    color: $color-main;
+}

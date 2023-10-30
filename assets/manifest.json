@@ -1,0 +1,9 @@
+{
+    "name": "Partinchem",
+    "short_name": "partinchem",
+    "start_url": "/",
+    "icons": [],
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#2b3147"
+}

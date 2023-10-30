@@ -1,0 +1,381 @@
+// Base
+@import "base/_colors";
+@import "base/_fonts";
+@import "base/_reset";
+//Mixin
+@import "components/_mixin";
+// Components
+@import "components/_header";
+@import "components/_footer";
+@import "components/_button";
+@import "components/_banner";
+@import "components/_form";
+@import "components/_elements";
+
+// Pages 
+@import "pages/_page";
+@import "pages/_products";
+@import "pages/_product-details";
+@import "pages/_product-list";
+@import "pages/_why";
+@import "pages/_terms";
+@import "pages/_blog";
+@import "pages/_blog-single";
+@import "pages/_contacts";
+
+
+/* Main */
+
+.main {
+    padding-top: 190px;
+    padding-bottom: 15px;
+    background-size: cover;
+    .main-info {
+        @include content-center;
+        margin-bottom: 65px;
+        .main-info-left {
+            width: 220px;
+            border-right: 5px solid #fff;
+            padding-right: 5px;
+            .main-title {
+                font-size: 35px;
+                font-weight: 300;
+                letter-spacing: 0.7px;
+                text-transform: uppercase;
+                color: #fff;
+                b {
+                    font-size: 38px;
+                    font-weight: 700;
+                    letter-spacing: 0.7px;
+                    text-transform: uppercase;
+                    color: #fff;
+                }
+            }
+        }
+        .main-info-right {
+            width: 170px;
+            margin-left: 25px;
+            .main-text {
+                margin-top: 5px;
+                font-size: 14px;
+                font-weight: 700;
+                line-height: 1.71;
+                letter-spacing: 0.9px;
+                color: #fff;
+            }
+        }
+    }
+    .main-product {
+        @include content-center;
+    }
+}
+
+//Partners-offer
+.partners-offer {
+    padding: 65px 15px;
+    text-align: center;
+    .promo {
+        max-width: 690px;
+        line-height: 24px;
+        letter-spacing: 1.1px;
+        margin: auto;
+    }
+    .button {
+        margin-top: 35px;
+    }
+}
+
+//Partners-plusi
+.partners-plusi {
+    padding-bottom: 85px;
+    .row {
+        @include content-center;
+    }
+    .item {
+        display: inline-block;
+        width: 270px;
+        margin: 20px 15px;
+        text-align: left;
+        .item-icon {
+            height: 65px;
+            width: 100%;
+            @include center-left;
+            img {
+                float: left;
+                max-height: 60px;
+                max-width: 60px;
+            }
+        }
+        .item-title {
+            margin-top: 25px;
+            margin-bottom: 15px;
+            transition: 0.3s;
+        }
+        .item-text {
+            max-width: 235px;
+            transition: 0.3s;
+        }
+    }
+    .item:hover {
+        .item-title {
+            margin-top: 18px;
+            margin-bottom: 8px;
+            transition: 0.3s;
+        }
+        .item-text {
+            transition: 0.3s;
+        }
+    }
+}
+
+//Map
+.map {
+    //    height: 450px;
+    position: relative;
+    height: auto;
+    width: 100%;
+    .map-phone {
+        display: none;
+    }
+    img {
+        width: 100%;
+        height: auto;
+    }
+    .map-label {
+        top: 0;
+        position: absolute;
+        width: auto;
+        height: auto;
+        transition: 0.3s;
+        margin-top: 0;
+    }
+    .map-label:hover {
+        transition: 0.3s;
+        margin-top: -5px;
+    }
+    .map-label01 {
+        height: 11%;
+        width: 6%;
+        top: 22.7%;
+        left: 4.8%;
+    }
+    .map-label02 {
+        height: 11%;
+        width: 6%;
+        top: 10.2%;
+        left: 43.5%;
+    }
+    .map-label03 {
+        height: 10%;
+        width: 6%;
+        top: 54.1%;
+        right: 32%;
+    }
+    .map-label04 {
+        height: 11%;
+        width: 6%;
+        top: 26.8%;
+        right: 2.7%;
+    }
+    .item {
+        position: absolute;
+        top: 53%;
+        left: 14.5%;
+        width: 290px;
+        padding: 30px 25px;
+        background-size: cover;
+        text-align: left;
+        @include center;
+        .item-title {
+            color: #fff;
+        }
+        .item-text {
+            margin-top: 15px;
+            font-size: 12px;
+            line-height: 1.33;
+            letter-spacing: 0.7px;
+            color: #fff;
+        }
+        .item-text:after {
+            content: "";
+            display: block;
+            height: 7px;
+            width: 190px;
+            margin-top: 20px;
+            background: $color-paint;
+        }
+    }
+}
+
+
+//Our partners
+.our-partners {
+    padding: 105px 15px 80px;
+    text-align: center;
+    .title {
+        margin-bottom: 20px;
+    }
+    .promo {
+        max-width: 690px;
+        line-height: 24px;
+        letter-spacing: 1.1px;
+        margin: auto;
+    }
+    .partners-logo {
+        margin-top: 35px;
+        text-align: center;
+        ul {
+            list-style: none;
+            li {
+                display: inline-block;
+                margin: 20px 25px;
+                a {
+                    display: inline-block;
+                    img {
+                        max-height: 40px;
+                        max-width: 170px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .location {
+        position: relative;
+        height: 60%;
+        overflow: hidden;
+    } //    .map {
+    //        height: 70%;
+    //        overflow: hidden;
+    //    }
+    //    .map .map-label01 {
+    //        height: 13%;
+    //        width: 8%;
+    //        top: 31.7%;
+    //        left: 3.8%;
+    //    }
+    //    .map .map-label02 {
+    //        height: 13%;
+    //        width: 8%;
+    //        top: 14.2%;
+    //        left: 42.5%;
+    //    }
+    //    .map .map-label03 {
+    //        height: 12.5%;
+    //        width: 8%;
+    //        top: 72.5%;
+    //        right: 31%;
+    //    }
+    //    .map .map-label04 {
+    //        height: 13%;
+    //        width: 8%;
+    //        top: 36.8%;
+    //        right: 1.7%;
+    //    }
+}
+
+@media screen and (max-width: 1024px) {
+    .partners-plusi .item {
+        width: 220px;
+    }
+    .location .item {
+        bottom: 25px;
+        top: auto;
+        left: 10%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .partners-plusi .row {
+        flex-direction: column;
+    }
+    .partners-plusi .item {
+        margin: 20px auto;
+    }
+    .map .map-phone {
+        display: block;
+    }
+    .map .map-desctope {
+        display: none;
+    }
+    .map .map-label01 {
+        height: 20%;
+        width: 15%;
+        top: 2.7%;
+        left: 1.8%;
+    }
+    .map .map-label02 {
+        height: 20%;
+        width: 15%;
+        top: -1.8%;
+        left: 38.9%;
+    }
+    .map .map-label03 {
+        height: 20%;
+        width: 13%;
+        top: 19%;
+        left: 57.9%;
+    }
+    .map .map-label04 {
+        height: 20%;
+        width: 15%;
+        top: 5.8%;
+        right: 0.7%;
+    }
+    .location .item {
+        position: absolute;
+        top: auto;
+        bottom: 15px;
+        left: 15px;
+        right: 15px;
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .main .main-info .main-info-left {
+        width: 100%;
+        border-right: 0;
+        margin: 0 0 15px 0;
+        padding: 0 15px;
+        text-align: center;
+    }
+    .main .main-info .main-info-right {
+        width: 100%;
+        margin-top: 0;
+        margin-left: 0;
+        text-align: center;
+        padding: 0 20px;
+    }
+    .main {
+        padding-top: 150px;
+        padding-bottom: 15px;
+    }
+    .main .main-info {
+        margin-bottom: 40px;
+    }
+}
+
+
+@media screen and (max-width: 410px) {
+    .our-partners .partners-logo ul li {
+        display: block;
+    }
+    .partners-plusi {
+        padding-bottom: 65px;
+    }
+    .our-partners {
+        padding: 80px 15px;
+    }
+    .map .item {
+        bottom: -30px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+@media screen and (max-width: 360px) {}

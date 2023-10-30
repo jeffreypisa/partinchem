@@ -1,0 +1,59 @@
+.section {
+    padding: 6.25rem 0 4.25rem 0;
+
+    &__content--pulled-up {
+        @include breakpoint(992) {
+            margin-top: -12.5rem;
+            margin-bottom: 1rem;
+            position: sticky;
+            top: 19.375rem;
+        }
+    }
+
+    &__title--small {
+        font-size: 1.5rem;
+        font-weight: 400;
+        margin: 0 0 .875rem 0;
+    }
+
+    &__text {
+        color: var(--color-text);
+        line-height: 1.75;
+        margin: 0 0 1rem 0;
+
+        p {
+            color: var(--color-text);
+            line-height: 1.75;
+            margin: 0 0 1rem 0;
+        }
+
+        ol, ul {
+            margin: 1rem 0;
+            padding-left: .875rem;
+        }
+    }
+
+    &__buttons {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: 1fr;
+        grid-gap: .5rem;
+        padding: 1rem 0;
+
+        @include breakpoint(480) {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    &__button {
+        width: 100%;
+        position: relative;
+
+        svg {
+            position: absolute;
+            right: 1.625rem;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}

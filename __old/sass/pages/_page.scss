@@ -1,0 +1,75 @@
+/* head */
+
+.page-head {
+    height: 165px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.page-head.page-head-small {
+    height: 120px;
+}
+
+/* pagination */
+
+.page-pagination {
+    padding: 15px 0;
+    .row {
+        padding: 0 20px;
+    }
+    * {
+        font-size: 11px;
+        line-height: 1.73;
+        letter-spacing: 0.4px;
+        color: #a8a8aa;
+    }
+    a:first-child {
+        margin-left: 0;
+    }
+    a {
+        margin: 0 10px;
+        color: #a8a8aa !important;
+    }
+    a:hover {
+        color: $color-main !important;
+        text-decoration: underline;
+    }
+    span {
+        margin-left: 10px;
+        color: $color-main;
+        font-weight: 500;
+    }
+}
+
+/* page-content */
+
+.page-content {
+    margin-top: 30px;
+}
+
+@media screen and (max-width: 1200px) {}
+
+@media screen and (max-width: 1024px) {}
+
+@media screen and (max-width: 768px) {
+    .page-head {
+        height: 130px;
+    }
+    .page-head.page-head-small {
+        height: 90px;
+    }
+}
+
+@media screen and (max-width: 480px) {}
+
+@media screen and (max-width: 380px) {}
+
+@media screen and (max-width: 360px) {
+    .page-pagination a {
+        margin-right: 5px;
+    }
+    .page-pagination span {
+        margin-left: 5px;
+    }
+}

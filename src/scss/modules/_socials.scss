@@ -1,0 +1,27 @@
+.socials {
+
+    &__list {
+        display: flex;
+    }
+
+    &__item {
+        margin: 0 .5rem 0 0 !important;
+    }
+
+    &__item:last-of-type {
+        margin: 0;
+    }
+
+    &__link {
+        width: 2.75rem;
+        height: 2.75rem;
+        border-radius: 50%;
+        border: 1px solid rgba(255,255,255,.2);
+        display: grid !important;
+        place-items: center;
+    }
+
+    &__icon i {
+        color: var(--color-light);
+    }
+}

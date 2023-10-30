@@ -1,0 +1,435 @@
+.header {
+    height: var(--header-height);
+    position: fixed;
+    left: 0;
+    right: 0;
+    background: #fff;
+    z-index: 999;
+
+    &--alt {
+        background-color: var(--color-background);
+    }
+
+    &__container {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        height: 100%;
+        max-width: 73.25em;
+        margin: 0 auto;
+        padding: 0 1rem;
+        align-self: center;
+    }
+
+    &__logo {
+        align-self: center;
+
+        img {
+            max-width: 8.75rem;
+            
+            @include breakpoint(768) {
+                max-width: 13.75rem;
+            }
+        }
+    }
+
+    &__navigation {
+        display: block;
+        float: none;
+        position: fixed;
+        top: 0;
+        right: -270px;
+        width: 250px;
+        margin-top: 0;
+        margin-left: 0;
+        background: #fff;
+        text-align: center;
+        padding-top: 150px;
+        height: 100%;
+        z-index: 1111;
+        transition: 0.3s;
+        box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.22);
+        overflow: auto;
+        align-self: center;
+        
+        @include breakpoint(1024) {
+            position: initial;
+            right: initial;
+            top: initial;
+            width: initial;
+            overflow: initial;
+            margin: 0 auto;
+            box-shadow: none;
+            padding: 0 2rem;
+            height: initial;
+            background: transparent;
+        }
+
+        &.is-open {
+            right: 0;
+            transition: 0.3s;
+          }
+
+        nav .nav-list {
+            list-style: none;
+         
+            @include breakpoint(1024) {
+              display: flex;
+            }
+        }
+         
+        nav .nav-list li {
+            display: block;
+            margin: 0;
+
+            @include breakpoint(1024) {
+                display: inline-block;
+                margin: 0 18px;
+            }
+        }
+
+        nav .nav-list li a {
+            display: block;
+            padding: 15px 10px;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0.9px;
+            color: rgba(43,49,71,.7);
+            transition: color .3s ease-in-out;
+            position: relative;
+            overflow: visible;
+
+            @include breakpoint(1024) {
+                display: inline-block;
+                padding: 1rem 0;
+            }
+        }
+
+        nav .nav-list li a:hover {
+        color: rgba(43,49,71,1);
+        }
+
+        nav .nav-list .current_page_item a,
+        nav .nav-list .current-menu-item a {
+            color: rgba(43,49,71,1);
+        }
+        
+        nav .nav-list li a::before {
+        content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: .125rem;
+            background-color: var(--color-accent);
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity .3s ease-in-out, visibility .3s ease-in-out, width .75s cubic-bezier(0.67, 0, 0.34, 1);
+            z-index: 1;
+        }
+        
+        nav .nav-list li a::after {
+        content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: .125rem;
+            background-color: #E0E0E0;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
+        }
+    
+    }
+
+    &__sidebar {
+        align-self: center;
+        justify-self: end;
+    }
+
+    &__toggle {
+        display: block;
+        align-self: center;
+
+        @include breakpoint(1024) {
+            display: none;
+        }
+    }
+
+}
+  
+  header .head-contacts {
+    padding: 2px 0 2px;
+    text-align: right;
+  }
+  header .head-contacts a {
+    margin-left: 30px;
+    font-size: 11px;
+    font-weight: 300;
+    letter-spacing: 0.9px;
+    display: none;
+  }
+  header .head-contacts a:hover {
+    color: var(--color-accent);
+  }
+  
+  li a:hover::before,
+  li a:hover::after {
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 100% !important;
+  }
+  
+  header .search-basket {
+    align-self: center;
+    transition: none !important;
+  }
+  header .search-basket button {
+    border: none;
+    outline: none;
+    background: none;
+    transition: none !important;
+    padding: .75rem;
+    position: relative;
+  }
+  
+  @media all and (min-width: 1024px) {
+    header .search-basket #searchButton {
+      display: none;
+    }
+  }
+  
+  header .search-basket button::before {
+    /* content: ''; */
+    height: 30px;
+    width: 1px; 
+    background-color:rgba(43,49,71,.2);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  
+  header .search-basket .icon {
+    font-size: 23px;
+    -webkit-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  header .search-basket .active {
+    -webkit-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+  }
+  header .search-basket .active .icon {
+    color: var(--color-accent);
+    -webkit-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+  }
+  
+  header .search-basket .icon:hover path {
+    stroke: var(--color-accent);
+  }
+  
+  header .search-basket .product-list {
+    display: inline-block;
+    position: relative;
+    padding: .75rem;
+    -webkit-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+    display: none;
+  }
+  header .search-basket .product-list .product-count {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background: var(--color-accent);
+    font-size: 10px;
+    color: #fff;
+    -webkit-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  header .search-basket .icon:hover {
+    color: var(--color-accent);
+    cursor: pointer;
+  }
+  header .button-navigation {
+    position: relative;
+    width: 26px;
+    height: 26px;
+    padding-top: 10px;
+    margin-left: 18px;
+    float: right;
+    cursor: pointer;
+    z-index: 1222;
+  }
+  header .button-navigation span {
+    position: relative;
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: #2b3147;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+  }
+  header .button-navigation span:before, header .button-navigation span:after {
+    position: absolute;
+    background: #2b3147;
+    content: '';
+    width: 25px;
+    height: 3px;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+  }
+  header .button-navigation span:before {
+    top: -8px;
+  }
+  header .button-navigation span:after {
+    top: 8px;
+  }
+  header .button-navigation.active span {
+    background: transparent;
+  }
+  header .button-navigation.active span:before {
+        transform: rotate(45deg) translate(5px, 6px);
+  }
+  header .button-navigation.active span:after {
+        transform: rotate(-45deg) translate(5px, -6px);
+  }
+  header .button-navigation {
+    display: none;
+  }
+  
+  header .search-panel--desktop {
+    width: 100%;
+    display: none;
+  }
+  
+  @media all and (min-width: 1024px) {
+    header .search-panel--desktop {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+    }
+  }
+  
+  header .search-panel {
+    display: none;
+    position: fixed;
+    top: 50px;
+    right: 0;
+    border: 1px solid #d7d7d7;
+    background-color: #ffffff;
+  }
+  
+  header .search-panel form,
+  header .search-panel--desktop form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0 0 0 10px;
+  }
+  header .search-panel form .input-search {
+    -webkit-box-flex: 3;
+        -ms-flex-positive: 3;
+            flex-grow: 3;
+  }
+  header .search-panel form input[type='text'] {
+    font-size: 12px !important;
+  }
+  header .search-panel form .button,
+  header .search-panel--desktop form .button {
+    width: 47px;
+  }
+  
+  header .search-panel form .button,
+  header .search-panel--desktop form .button { 
+    background-color: var(--color-accent) !important;
+  }
+  
+  header .search-panel form .button .icon,
+  header .search-panel--desktop form .button .icon {
+    color: #ffffff !important;
+  }
+  
+  header .search-panel.in {
+    display: block;
+  }
+  
+  @media screen and (max-width: 1024px) {
+    header .button-navigation {
+      display: inline-block;
+    }
+  
+    header .navigation {
+     
+    }
+
+  }
+  @media screen and (max-width: 768px) {
+    header .container .row {
+      padding: 0 15px;
+    }
+  
+    header .head-contacts {
+      padding: 2px 0 2px;
+      text-align: center;
+    }
+  
+    header .head-contacts a {
+      margin-left: 0;
+      margin: 0 10px;
+    }
+  
+    header .search-basket {
+      /* margin-top: 14px; */
+    }
+  
+    header .navigation {
+      padding-top: 90px;
+    }
+  
+    header .search-panel form input[type='text'] {
+      font-size: 16px !important;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    header .search-panel form .button {
+      width: 45px;
+    }
+  
+    header .search-panel form {
+      padding: 10px;
+    }
+  }

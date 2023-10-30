@@ -1,0 +1,38 @@
+.page-blog {
+    padding-bottom: 50px;
+    .page-title {
+        margin-bottom: 30px;
+        margin-left: 15px;
+    }
+    .container {
+        width: 910px;
+        box-sizing: border-box;
+    }
+    .row:nth-child(2) {
+        display: flex;
+        @include content-center;
+    }
+    .blog-box {
+        margin-bottom: 30px;
+    }
+    .blog-box-hidden {
+        display: none;
+    }
+    .row:last-child {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 1200px) {}
+
+@media screen and (max-width: 1024px) {
+    .page-blog .container {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {}
+
+@media screen and (max-width: 480px) {}
+
+@media screen and (max-width: 380px) {}

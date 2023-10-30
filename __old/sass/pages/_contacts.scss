@@ -1,0 +1,164 @@
+.page-contacts {
+    .page-title {
+        margin-bottom: 40px;
+    }
+    .container {
+        width: 860px;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+    .map-content {
+        position: relative;
+        padding-bottom: 350px;
+        width: 100%;
+        background-size: cover;
+
+    }
+    .boxes {
+        max-width: 900px;
+        margin: auto;
+        @include content-center;
+    }
+    .contact-box {
+        position: relative;
+        background: $color-main;
+        padding: 30px;
+        width: 400px;
+        height: 270px;
+        box-sizing: border-box;
+        margin: 15px;
+        .contact-title {
+            margin: 0;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #494e60;
+            margin-bottom: 10px;
+            h2 {
+                margin: 0;
+            }
+            span {
+                font-size: 27px;
+                line-height: 120%;
+                color: #fff;
+            }
+            .country {
+                font-weight: 500;
+            }
+            .town {
+                font-weight: 300;
+            }
+        }
+        .contact-info {
+            p {
+                margin-top: 20px;
+            }
+            p,
+            a {
+                font-size: 14px;
+                line-height: 1.14;
+                letter-spacing: 0.8px;
+                color: #fff;
+            }
+            a:hover {
+                color: $color-paint;
+            }
+        }
+        .button-plus {
+            display: inline-block;
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            border: none;
+            bottom: 20px;
+            right: 30px;
+            background: #fff;
+            padding: 5px 13px;
+            cursor: pointer;
+            transition: 0.2s;
+            box-sizing: border-box;
+            .icon {
+                width: 0;
+                height: 0;
+                display: inline-block;
+                position: relative;
+                top: -7px;
+                left: -14px;
+            }
+            .icon:before {
+                color: $color-main;
+                font-size: 28px;
+            }
+        }
+        .button-plus:hover {
+            background: $color-paint;
+            transition: 0.2s;
+            .icon:before {
+                color: #fff;
+                font-size: 28px;
+            }
+        }
+        .border {
+            position: absolute;
+            bottom: 20px;
+            left: 30px;
+            width: 170px;
+            height: 7px;
+            background: $color-paint;
+        }
+
+    }
+    .call {
+        padding: 50px 15px 0;
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 1.75;
+        letter-spacing: 0.6px;
+        text-align: center;
+        a {
+            font-weight: 700;
+            letter-spacing: 0.9px;
+            font-size: 20px;
+            line-height: 1.75;
+            letter-spacing: 0.9px;
+            text-align: center;
+        }
+        a:hover {
+            color: $color-paint;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {}
+
+@media screen and (max-width: 1024px) {
+    .page-contacts .container {
+        width: 100%;
+    }
+    .page-contacts .contact-box {
+        padding: 20px;
+        width: 350px;
+    }
+    .page-contacts .contact-box .contact-title span {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .page-contacts .map-content {
+        padding-bottom: 100px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+}
+
+@media screen and (max-width: 380px) {
+    .page-contacts .contact-box {
+        width: 290px;
+    }
+    .page-contacts .contact-box .contact-title span {
+        font-size: 21px;
+    }
+    .page-contacts .map-content {
+        padding-bottom: 100px;
+    }
+}

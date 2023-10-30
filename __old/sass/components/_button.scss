@@ -1,0 +1,84 @@
+.button {
+    display: inline-block;
+    width: 270px;
+    padding: 12px 15px 11px;
+    border: none;
+    color: #fff !important;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    line-height: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.button-dark {
+    background: $color-main;
+}
+
+.button-dark:hover {
+    background: $color-paint;
+    transition: 0.1s;
+}
+
+.button-color {
+    background: $color-paint;
+}
+
+.button-color:hover {
+    background: $color-main;
+    transition: 0.1s;
+}
+
+.button.button-light {
+    width: 180px;
+    background: none;
+    border: 1px solid $color-light;
+    color: $color-main !important;
+}
+
+.button.button-light:hover {
+    background: $color-light;
+    color: #fff !important;
+}
+
+.button.button-cart {
+    padding-top: 5px;
+    .icon {
+        position: relative;
+        top: 4px;
+        color: #fff;
+        font-size: 23px;
+        margin-left: 10px;
+    }
+}
+
+.button-all {
+    display: inline-block;
+    color: #a8a8aa;
+    text-decoration: underline;
+    font-size: 12px;
+    letter-spacing: 0.4px;
+    cursor: pointer;
+}
+
+.button-all:hover {
+    color: $color-main;
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 1200px) {}
+
+@media screen and (max-width: 1024px) {}
+
+@media screen and (max-width: 768px) {}
+
+@media screen and (max-width: 480px) {}
+
+@media screen and (max-width: 380px) {
+    .button {
+        width: 250px;
+    }
+}

@@ -1,0 +1,48 @@
+.page-terms {
+    padding-bottom: 100px;
+    .container {
+        width: 860px;
+        padding: 0 20px;
+        margin: auto;
+    }
+    .page-title {
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+    .text {
+        a {
+            color: $color-paint;
+            font-size: 12px;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        h4 {
+            font-weight: 700;
+            font-size: 12px;
+            margin-top: 0;
+            margin-bottom: 5px;
+        }
+        br {
+            line-height: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {}
+
+@media screen and (max-width: 1024px) {
+    .page-terms .container {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+@media screen and (max-width: 768px) {}
+
+@media screen and (max-width: 480px) {}
+
+@media screen and (max-width: 380px) {}

@@ -1,0 +1,39 @@
+:root {
+
+    /* Colors */
+    --color-light: #ffffff;
+	--color-gray: #969696;
+	--color-dark: #000000;
+	--color-text-light: #8f9194;
+    --color-text-dark: #45474b;
+    --color-background: #F8F8F8;
+    --color-title: #2B3147;
+	--color-text: #808391;
+	--color-accent: #049B92; 
+
+    /* Font families */
+    --font-lato: "Roboto Slab", sans-serif;
+    --font-roboto: "Roboto Slab", sans-serif;
+
+	/* Sizes */
+	--header-height: 3.125rem;
+	--hero-height: 17.5rem;
+	--hero-height-large: auto;
+	--hero-height-full: 100vh; 
+	--container-width: 73.25em;
+    
+    /* 768px */
+    @media screen and (min-width: 48em) {
+
+		/* Sizes */
+		--header-height: 6.25em;
+		--hero-height: 28rem;
+		--hero-height-large: 43.75rem;
+		--hero-height-full: 100vh; 
+	}
+
+	@media screen and (min-width: 64em) {
+
+	}
+    
+}

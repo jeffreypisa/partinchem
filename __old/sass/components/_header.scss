@@ -1,0 +1,278 @@
+header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    background: #fff;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.22);
+    -moz-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.22);
+    -webkit-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.22);
+    z-index: 999;
+    .container {
+        background: #fff;
+        .row {
+            padding: 0 20px;
+        }
+    }
+
+    /* contacts */
+    .head-contacts {
+        padding: 2px 0 2px;
+        text-align: right;
+        a {
+            margin-left: 30px;
+            font-size: 11px;
+            font-weight: 300;
+            letter-spacing: 0.9px;
+        }
+        a:hover {
+            color: $color-paint;
+        }
+    }
+
+    /* logo */
+    .logo {
+        display: inline-block;
+        float: left;
+        margin-top: 13px;
+        margin-bottom: 27px;
+        text-align: left;
+        a {
+            display: inline-block;
+            img {
+                max-height: 70px;
+                max-width: 220px;
+            }
+        }
+    }
+
+    /* navigation */
+    .navigation {
+        display: inline-block;
+        float: left;
+        margin-top: 30px;
+        margin-left: 65px;
+        nav {
+            .nav-list {
+                list-style: none;
+                li {
+                    display: inline-block;
+                    margin: 0 18px;
+                    a {
+                        display: inline-block;
+                        font-size: 14px;
+                        font-weight: 500;
+                        letter-spacing: 0.9px;
+                        color: $color-main;
+                        text-transform: uppercase;
+                    }
+                    a:hover {
+                        color: $color-paint;
+                    }
+                }
+                .current_page_item a,
+                .current-menu-item a{ 
+                    color: $color-paint;
+                }
+            }
+        }
+    }
+
+    /* search-basket */
+    .search-basket {
+        display: inline-block;
+        float: right;
+        margin-top: 28px;
+        button {
+            border: none;
+            outline: none;
+            background: none;
+        }
+        .icon {
+            font-size: 23px;
+        }
+        .active {
+            .icon {
+                color: $color-paint;
+            }
+        }
+        .product-list {
+            display: inline-block;
+            position: relative;
+            margin-left: 20px;
+            margin-right: 5px;
+            .product-count {
+                position: absolute;
+                top: -7px;
+                left: -7px;
+                width: 17px;
+                height: 17px;
+                border-radius: 50%;
+                background: $color-paint;
+                font-size: 10px;
+                color: #fff;
+                @include center;
+            }
+        }
+        .icon:hover {
+            color: $color-paint;
+            cursor: pointer;
+        }
+    }
+
+    /* button navigation */
+    .button-navigation {
+        position: relative;
+        width: 26px;
+        height: 26px;
+        padding-top: 10px;
+        margin-left: 18px;
+        float: right;
+        cursor: pointer;
+        z-index: 1222;
+        span {
+            position: relative;
+            display: block;
+            width: 25px;
+            height: 3px;
+            background: $color-main;
+            transition: all .2s ease-in-out;
+            &:before,
+            &:after {
+                position: absolute;
+                background: $color-main;
+                content: '';
+                width: 25px;
+                height: 3px;
+                transition: all .2s ease-in-out;
+            }
+            &:before {
+                top: -8px;
+            }
+            &:after {
+                top: 8px;
+            }
+        }
+    }
+    .button-navigation.active {
+        span {
+            background: transparent;
+            &:before {
+                transform: rotate(45deg) translate(5px, 6px);
+            }
+            &:after {
+                transform: rotate(-45deg) translate(5px, -6px);
+            }
+        }
+    }
+    .button-navigation {
+        display: none;
+    }
+
+    /* search-panel */
+    .search-panel {
+        display: none;
+        width: 100%;
+        border-top: 1px solid $color-light;
+        form {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 15px 0;
+            .input-search {
+                flex-grow: 3;
+                margin-right: 10px;
+            }
+            .button {
+                width: 180px;
+            }
+        }
+    }
+    .search-panel.in {
+        display: block;
+    }
+}
+
+
+@media screen and (max-width: 1200px) {}
+
+@media screen and (max-width: 1024px) {
+    header .button-navigation {
+        display: inline-block;
+    }
+    header .navigation {
+        display: block;
+        float: none;
+        position: fixed;
+        top: 0;
+        right: -270px;
+        width: 250px;
+        margin-top: 0;
+        margin-left: 0;
+        background: #fff;
+        text-align: center;
+        padding-top: 150px;
+        height: 100%;
+        z-index: 1111;
+        transition: 0.3s;
+        box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.22);
+        -moz-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.22);
+        -webkit-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.22);
+        overflow: auto;
+    }
+    header .navigation.in {
+        right: 0;
+        transition: 0.3s;
+    }
+    header .navigation nav .nav-list li {
+        display: block;
+        margin: 0;
+    }
+    header .navigation nav .nav-list li a {
+        display: block;
+        padding: 15px 10px;
+    }
+    header .logo {
+        margin-top: 12px;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header .container .row {
+        padding: 0 15px;
+    }
+    header .logo a img {
+        max-height: 45px;
+        max-width: 140px;
+    }
+    header .head-contacts {
+        padding: 2px 0 2px;
+        text-align: center;
+    }
+    header .head-contacts a {
+        margin-left: 0;
+        margin: 0 10px;
+    }
+    header .search-basket {
+        margin-top: 14px;
+    }
+    header .navigation {
+        padding-top: 90px;
+    }
+    header .logo {
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header .search-panel form .button {
+        width: 90px;
+    }
+    header .search-panel form {
+        padding: 10px 0;
+    }
+}
+
+@media screen and (max-width: 380px) {}
