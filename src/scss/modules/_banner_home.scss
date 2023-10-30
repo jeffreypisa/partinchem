@@ -1,0 +1,41 @@
+.home .header {
+	box-shadow: 0px 1px 3px rgba(0,0,0,0.05);
+}
+.banner-home {
+	padding: 100px 0 50px 0;
+	background-size: cover;
+	color: #fff;
+	position: relative;
+	&::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 30%; /* Je kunt dit aanpassen afhankelijk van hoeveel van de afbeelding je wilt bedekken */
+		background: linear-gradient(black, transparent);
+		pointer-events: none; /* Zorgt ervoor dat de overlay geen muisklikken of aanrakingen opvangt */
+		opacity: .8;
+	}
+	h1 {
+		font-weight: 200;
+	}
+}
+
+ @include breakpoint(768) {
+ 	.banner-home {
+		 padding: 200px 0 100px 0;
+	 }
+ }
+ 
+ @include breakpoint(1024) {
+	  .banner-home {
+		  padding: 250px 0 150px 0;
+	  }
+  }
+  
+  @include breakpoint(1200) {
+		.banner-home {
+			padding: 300px 0 200px 0;
+		}
+	}

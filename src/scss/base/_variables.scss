@@ -1,3 +1,11 @@
+@font-face {
+	font-family: 'Microsquare';
+	src: url('../fonts/microsquare-bold-webfont.woff2') format('woff2'),
+		 url('../fonts/microsquare-bold-webfont.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+}
+
 :root {
 
     /* Colors */
@@ -5,16 +13,17 @@
 	--color-gray: #969696;
 	--color-dark: #000000;
 	--color-text-light: #8f9194;
-    --color-text-dark: #45474b;
+    --color-text-dark: #000000;
     --color-background: #F8F8F8;
-    --color-title: #2B3147;
+    --color-title: #000000;
 	--color-text: #808391;
 	--color-accent: #049B92; 
 
     /* Font families */
     --font-lato: "Roboto Slab", sans-serif;
     --font-roboto: "Roboto Slab", sans-serif;
-
+	--font-microscquare: "Microsquare", sans-serif;
+	
 	/* Sizes */
 	--header-height: 3.125rem;
 	--hero-height: 17.5rem;

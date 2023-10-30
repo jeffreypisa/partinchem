@@ -422,6 +422,86 @@
       "oAP" : "\/about.php",
       "oF" : 0
     },
+    "\/acf-json\/en\/group_5c08cb3e4a16d.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/acf-json\/en\/group_5c08cb3e4a16d-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
+    "\/acf-json\/en\/group_5c06250c26141.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/acf-json\/en\/group_5c06250c26141-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
+    "\/acf-json\/en\/group_5c1751391da74.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/acf-json\/en\/group_5c1751391da74-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
+    "\/acf-json\/en\/group_5d318c28261ad.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/acf-json\/en\/group_5d318c28261ad-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
+    "\/acf-json\/en\/group_5db845ff75dcd.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/acf-json\/en\/group_5db845ff75dcd-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
+    "\/acf-json\/en\/group_5dd416c784654.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/acf-json\/en\/group_5dd416c784654-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
+    "\/acf-json\/en\/group_5e1c7cafe0663.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/acf-json\/en\/group_5e1c7cafe0663-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
+    "\/acf-json\/en\/group_5f62211072162.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/acf-json\/en\/group_5f62211072162-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
+    "\/acf-json\/en\/group_5fa4060452fe5.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/acf-json\/en\/group_5fa4060452fe5-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
+    "\/acf-json\/en\/group_5fbd0a0bc29eb.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/acf-json\/en\/group_5fbd0a0bc29eb-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
     "\/ajax.php" : {
       "cB" : 0,
       "ft" : 8192,
@@ -612,6 +692,126 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/downloads.php",
+      "oF" : 0
+    },
+    "\/favicon.ico" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/favicon.ico",
+      "oF" : 0
+    },
+    "\/favicon\/android-chrome-192x192.png" : {
+      "ft" : 32768,
+      "iS" : 1871,
+      "oA" : 0,
+      "oAP" : "\/favicon\/android-chrome-192x192.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 90,
+      "rq" : 75
+    },
+    "\/favicon\/android-chrome-384x384.png" : {
+      "ft" : 32768,
+      "iS" : 3892,
+      "oA" : 0,
+      "oAP" : "\/favicon\/android-chrome-384x384.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 90,
+      "rq" : 75
+    },
+    "\/favicon\/apple-touch-icon.png" : {
+      "ft" : 32768,
+      "iS" : 1610,
+      "oA" : 0,
+      "oAP" : "\/favicon\/apple-touch-icon.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 90,
+      "rq" : 75
+    },
+    "\/favicon\/browserconfig.xml" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/favicon\/browserconfig.xml",
+      "oF" : 0
+    },
+    "\/favicon\/favicon-16x16.png" : {
+      "ft" : 32768,
+      "iS" : 567,
+      "oA" : 0,
+      "oAP" : "\/favicon\/favicon-16x16.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 90,
+      "rq" : 75
+    },
+    "\/favicon\/favicon-32x32.png" : {
+      "ft" : 32768,
+      "iS" : 756,
+      "oA" : 0,
+      "oAP" : "\/favicon\/favicon-32x32.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 90,
+      "rq" : 75
+    },
+    "\/favicon\/favicon.ico" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/favicon\/favicon.ico",
+      "oF" : 0
+    },
+    "\/favicon\/mstile-150x150.png" : {
+      "ft" : 32768,
+      "iS" : 2033,
+      "oA" : 0,
+      "oAP" : "\/favicon\/mstile-150x150.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 90,
+      "rq" : 75
+    },
+    "\/favicon\/safari-pinned-tab.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/favicon\/safari-pinned-tab.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/favicon\/site.webmanifest" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/favicon\/site.webmanifest",
       "oF" : 0
     },
     "\/fonts\/fontawesome-webfont.eot" : {
@@ -1829,6 +2029,21 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/src\/scss\/modules\/_banner_home.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/src\/scss\/modules\/_banner_home.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
     "\/src\/scss\/modules\/_button.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -2274,7 +2489,7 @@
     "creationDate" : 717325110.824453,
     "displayValue" : "partinchem",
     "displayValueWasSetByUser" : 0,
-    "iconImageName" : "brackets_purple",
+    "iconImageName" : "\/favicon\/apple-touch-icon.png",
     "iconImageWasSetByUser" : 0
   },
   "projectSettings" : {

@@ -10,7 +10,7 @@ get_header(); ?>
     <div class="block banner-home" style="background-image: url(<?php $image = get_field('hero_image'); echo esc_url($image['url']); ?>">
         <div class="container">
             <div class="row">
-                <div class="box-12">
+                <div class="box-12 box-md-10 box-md-offset-1 box-lg-8 box-lg-offset-2">
                     <div class="block__header">
                         <?php the_field( 'hero_header'); ?>                                 
                     </div>

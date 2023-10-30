@@ -50,7 +50,7 @@
         button {
             flex: 0 0 2.75rem;
             max-width: 2.75rem;
-            background-color: var(--color-accent);
+            background-color: #000;
             border: none;
             outline: none;
             border-radius: 0 5px 5px 0;
@@ -58,6 +58,11 @@
             align-items: center;
             justify-content: center;
             cursor: pointer;
+            color: #fff;
+            font-size: 16px;
+            text-transform: uppercase;
+            font-family: var(--font-microscquare);
+            font-weight: 700;
 
             @include breakpoint(768) {
                 flex: 0 0 8.8125rem;
@@ -66,12 +71,21 @@
 
             p {
                 margin: 0 .5rem 0 0;
-                font-family: var(--font-roboto);
-                font-size: 1rem;
+                color: #fff;
+                font-size: 16px;
+                text-transform: uppercase;
+                font-family: var(--font-microscquare);
+                font-weight: 700;
                 display: none;
 
                 @include breakpoint(768) {
                     display: block;
+                }
+            }
+            &:hover {
+                color: var(--color-accent);
+                p {
+                    color: var(--color-accent);
                 }
             }
         }

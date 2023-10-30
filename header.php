@@ -18,11 +18,13 @@
 
 <head>
 
-    <?php if ( get_field( 'favicon', 'options' ) ) { ?>
-
-        <link rel="SHORTCUT ICON" href="<?php the_field('favicon', 'options'); ?>" type="images/x-icon">
-
-    <?php }; ?>
+    <link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_template_directory_uri(); ?>/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_template_directory_uri(); ?>/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_template_directory_uri(); ?>/favicon/favicon-16x16.png">
+    <link rel="manifest" href="<?php echo get_template_directory_uri(); ?>/favicon/site.webmanifest">
+    <link rel="mask-icon" href="<?php echo get_template_directory_uri(); ?>/favicon/safari-pinned-tab.svg" color="#000000">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
 
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -53,12 +55,13 @@
 
     <?php wp_body_open(); ?>
 
-    <header class="header<?php if ( is_tax() || is_search() || is_singular( array( 'products', 'application' ) ) || is_page(8598) ) { echo ' header--alt'; } ?>">
+    <header class="header<?php if ( is_tax() || is_search() || is_singular( array( 'products', 'application' ) ) || is_page(8598) ) { echo ' header--alt'; } ?> is_transparent">
         <div class="header__container">
             <div class="header__logo">
                 <a class="logo" href="<?php echo home_url(); ?>" title="<?php bloginfo( 'name' ); ?>" rel="home">
                     <picture>
-                        <img alt="Partinchem logo" width="200" height="43" src="<?php the_logo(); ?>" title="Logo">
+                        <img class="logodark" alt="Partinchem logo" width="200" height="43" src="<?php the_field('logo', 'option'); ?>" title="Logo">
+                        <img class="logolight" alt="Partinchem logo" width="200" height="43" src="<?php the_field('logo_light', 'option'); ?>" title="Logo">
                     </picture>
                 </a>
             </div>			

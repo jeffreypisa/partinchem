@@ -14,22 +14,22 @@
 
 ?>
 
-<footer>
+<footer style="padding-left: 5px; padding-right: 5px;">
         <div class="container">
             <div class="row">
                  <!--item-->
                  <div class="item item-logo">
                     <div class="item-content">
                         
-                    <?php if ( get_the_logo() ) { ?>
-                        <div class="logo">
-                            <a class="logo" href="<?php echo home_url(); ?>" title="<?php bloginfo( 'name' ); ?>" rel="home">
-                                <picture>
-                                    <img width="165" height="36" alt="Partinchem logo" src="<?php the_logo(); ?>" title="Logo">
-                                </picture>
-                            </a>
-				        </div>
-                    <?php } ?>
+
+                    <div class="logo">
+                        <a class="logo" href="<?php echo home_url(); ?>" title="<?php bloginfo( 'name' ); ?>" rel="home">
+                            <picture>
+                                <img width="165" height="36" alt="Partinchem logo" src="<?php the_field('logo_light', 'option'); ?>" title="Logo">
+                            </picture>
+                        </a>
+			        </div>
+   
                     <?php 
                     $phone = get_field( 'contact_phone', 'options' ); 
                     $email = get_field( 'contact_email', 'options' ); 

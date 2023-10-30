@@ -48,6 +48,27 @@ import { initFormValidation } from './modules/initFormValidation';
     initFilter(); 
     initFormValidation();
     
+    // Wacht tot de pagina volledig is geladen
+    window.addEventListener('DOMContentLoaded', function() {
+        // Check of de body de class 'home' heeft
+        if (document.body.classList.contains('home')) {
+            // Selecteer de header met de class 'header'
+            var header = document.querySelector('.header');
+    
+            // Voeg een event listener toe voor het scrollen van de pagina
+            window.addEventListener('scroll', function() {
+                // Check of de scroll positie bovenaan de pagina is
+                if (window.pageYOffset === 0) {
+                    // Voeg de 'is_transparent' class toe als de pagina bovenaan is
+                    header.classList.add('is_transparent');
+                } else {
+                    // Verwijder de 'is_transparent' class als er gescrolled is
+                    header.classList.remove('is_transparent');
+                }
+            });
+        }
+    });
+    
 	window.addEventListener('load', () => {
         initAccordion();
     })
