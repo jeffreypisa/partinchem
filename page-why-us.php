@@ -46,21 +46,6 @@ get_header(); ?>
         </div>
     </div>
 
-    <div class="block">
-        <div class="container">
-            <div class="row">
-                <div class="box-md-5 box-to-right">
-                    <img class="offer_img" src="<?php echo get_field('image_offer')['sizes']['large']; ?>" alt="">
-                </div>
-                <div class="box-md-5 box-to-right">
-                    <div class="offer_content">
-                        <?php the_field('content_offer'); ?>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <div class="block timeline">
         <div class="container">
             <div class="row justify-between">

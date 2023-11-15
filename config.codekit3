@@ -7,7 +7,7 @@
       "uuidString" : "7E129F14-0CFF-4D8C-8C8A-73D2FBE2BBD8"
     }
   ],
-  "creatorBuild" : "34518",
+  "creatorBuild" : "34564",
   "files" : {
     "\/__old\/EXAMPLE.php" : {
       "cB" : 0,
@@ -498,6 +498,14 @@
       "ft" : 524288,
       "oA" : 1,
       "oAP" : "\/acf-json\/en\/group_5fbd0a0bc29eb-min.json",
+      "oF" : 0,
+      "oO" : 1,
+      "oS" : 1
+    },
+    "\/acf-json\/es\/group_5f06cb4d3844d.json" : {
+      "ft" : 524288,
+      "oA" : 1,
+      "oAP" : "\/acf-json\/es\/group_5f06cb4d3844d-min.json",
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
@@ -3316,9 +3324,6 @@
       "no-new-native-nonconstructor" : {
         "active" : 0
       },
-      "no-new-object" : {
-        "active" : 0
-      },
       "no-new-symbol" : {
         "active" : 1
       },
@@ -3330,6 +3335,9 @@
       },
       "no-obj-calls" : {
         "active" : 1
+      },
+      "no-object-constructor" : {
+        "active" : 0
       },
       "no-octal" : {
         "active" : 1

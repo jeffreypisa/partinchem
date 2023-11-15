@@ -47,6 +47,11 @@
 /* Transition */
 /* Breakpoints */
 /* Sections */
+.wpml-ls-flag {
+  margin-right: 5px;
+  transform: translate(0px, 3px);
+}
+
 .home .header.is_transparent {
   background: transparent;
 }
@@ -6065,6 +6070,10 @@ input[type=range]::-ms-thumb {
 }
 .banner-home h1 {
   font-weight: 200;
+}
+.banner-home p {
+  color: #fff;
+  font-weight: 600;
 }
 
 @media (min-width: 48em) {

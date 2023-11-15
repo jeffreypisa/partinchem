@@ -29,19 +29,25 @@
                             </picture>
                         </a>
 			        </div>
-   
+                    
+                    <br><br>
+                    
                     <?php 
                     $phone = get_field( 'contact_phone', 'options' ); 
                     $email = get_field( 'contact_email', 'options' ); 
                     ?>
-                    <div class="contact-info">
-                        <?php if ( $phone ) { ?>
-                            <a href="tel:<?php echo $phone; ?>" title="Call"><?php echo $phone; ?></a>
-                        <?php } ?>
-                        <?php if ( $email ) { ?>
-                            <a href="mailto:<?php echo $email; ?>" title="Email"><?php echo $email; ?></a>
-                        <?php } ?>
-                    </div>
+                    
+                    <!--
+                        <div class="contact-info">
+                            <?php if ( $phone ) { ?>
+                                <a href="tel:<?php echo $phone; ?>" title="Call"><?php echo $phone; ?></a>
+                            <?php } ?>
+                            <?php if ( $email ) { ?>
+                                <a href="mailto:<?php echo $email; ?>" title="Email"><?php echo $email; ?></a>
+                            <?php } ?>
+                        </div>
+                    -->
+                
                     <?php if ( is_active_sidebar( 'sidebar-social' ) ) { ?>
 							<?php dynamic_sidebar( 'sidebar-social' ); ?>
 					<?php } ?>
@@ -62,12 +68,6 @@
                             <li><a href="">Propylene</a></li>
                         </ul> -->
                     </div>
-                    <?php if ( is_front_page() ) { ?> 
-                        <a href="#stock" title="Our Stock" class="button stock__button stock__button--footer">Our Stock</a>
-                    <?php } else { ?>
-                        <a href="<?php echo home_url( '#stock' ); ?>" title="Our Stock" class="button stock__button stock__button--footer">Our Stock</a>
-                    <?php } ?>
-                    <a href="https://www.partinchem.com/products/" title="Our products" class="button button--ghost">Our products</a>
                 </div>
                 <!--item-->
                 <div class="item">
@@ -75,7 +75,6 @@
                         <h4 class="item-title size4">Contact</h4>
                         <?php wp_nav_menu( array( 'theme_location' => 'footer-menu-contacts') ); ?>
                     </div>
-                    <a href="https://www.partinchem.com/contact/" title="Contact us" class="button button--ghost">Contact us</a>
                 </div>
                 <!--item-->
                 <div class="item">
@@ -91,7 +90,6 @@
                             <li><a href="">Privacy Policy</a></li>
                         </ul> -->
                     </div>
-                    <a href="https://www.partinchem.com/why-us/" title="About us" class="button button--ghost">About us</a>
                 </div>
                 <!--item-->
                 <!-- <div class="item">
