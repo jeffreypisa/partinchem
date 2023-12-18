@@ -1,0 +1,5233 @@
+{
+    "key": "group_5dd416c784654",
+    "title": "Partners in Chemicals product range",
+    "fields": [
+        {
+            "key": "field_5dc3e4afc2b4a",
+            "label": "Product description",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5ceea7d6a2094",
+            "label": "Product description (short)",
+            "name": "product_description_short",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 2,
+            "new_lines": ""
+        },
+        {
+            "key": "field_62d9106fc6079",
+            "label": "Product FAQ",
+            "name": "product_faq",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5cee9c1f76a61",
+            "label": "Product description (extensive)",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5f6352b888b46",
+            "label": "Product description (extensive)",
+            "name": "product_description_extensive",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "The most extensive description of your product",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "text",
+            "media_upload": 0,
+            "toolbar": "full",
+            "delay": 0
+        },
+        {
+            "key": "field_5dc3e4cac2b4b",
+            "label": "Product composition",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5fb4fce931594",
+            "label": "Product composition availability",
+            "name": "product_composition_availability",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Do we have access to the composition of the product we offer? If not choose NO and no composition information will be displayed. If we have composition information choose YES and fill out the reuired fields",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "YES": "YES",
+                "NO": "NO"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5fb5056b4c31c",
+            "label": "Blend or single component",
+            "name": "blend_or_single_component",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Is it a blend (more then 1 component) or a single component",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5fb4fce931594",
+                        "operator": "==",
+                        "value": "YES"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "BLEND": "BLEND",
+                "NO BLEND": "NO BLEND"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5de0fe1ba019f",
+            "label": "Product composition blend",
+            "name": "product_composition_blend",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Which chemicals does the product consists of? Is it one component with 1 CAS no. or more components with more CAS numbers; all components known must be listed and with the correct %",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5fb5056b4c31c",
+                        "operator": "==",
+                        "value": "BLEND"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 1,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add Row",
+            "sub_fields": [
+                {
+                    "key": "field_5de0fe31a01a7",
+                    "label": "Product name",
+                    "name": "product_name",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "parent_repeater": "field_5de0fe1ba019f"
+                },
+                {
+                    "key": "field_5de0fe4da01a8",
+                    "label": "CAS number",
+                    "name": "cas_number",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "parent_repeater": "field_5de0fe1ba019f"
+                },
+                {
+                    "key": "field_5de0fe59a01a9",
+                    "label": "Chemical name",
+                    "name": "chemical_name",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "parent_repeater": "field_5de0fe1ba019f"
+                },
+                {
+                    "key": "field_5de0fe6ea01aa",
+                    "label": "Moleculair formula",
+                    "name": "moleculair_formula",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "parent_repeater": "field_5de0fe1ba019f"
+                },
+                {
+                    "key": "field_5de0fe7ba01ab",
+                    "label": "Molecular weight (g\/mol)",
+                    "name": "molecular_weight_gmol",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "parent_repeater": "field_5de0fe1ba019f"
+                },
+                {
+                    "key": "field_5de0fe8aa01ac",
+                    "label": "Product percentage of the blend",
+                    "name": "product_percentage_of_the_blend",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "parent_repeater": "field_5de0fe1ba019f"
+                }
+            ],
+            "rows_per_page": 20
+        },
+        {
+            "key": "field_5fb505f14c31d",
+            "label": "Product composition single component",
+            "name": "product_composition_single_component",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Which chemicals does the product consists of? Is it one component with 1 CAS no. or more components with more CAS numbers; all components known must be listed and with the correct %",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5fb5056b4c31c",
+                        "operator": "==",
+                        "value": "NO BLEND"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 1,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add Row",
+            "sub_fields": [
+                {
+                    "key": "field_5fb505f14c31f",
+                    "label": "CAS number",
+                    "name": "cas_number",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "parent_repeater": "field_5fb505f14c31d"
+                },
+                {
+                    "key": "field_5fb505f14c320",
+                    "label": "Chemical name",
+                    "name": "chemical_name",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "parent_repeater": "field_5fb505f14c31d"
+                },
+                {
+                    "key": "field_5fb505f14c321",
+                    "label": "Moleculair formula",
+                    "name": "moleculair_formula",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "parent_repeater": "field_5fb505f14c31d"
+                },
+                {
+                    "key": "field_5fb505f14c322",
+                    "label": "Molecular weight (g\/mol)",
+                    "name": "molecular_weight_gmol",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "parent_repeater": "field_5fb505f14c31d"
+                }
+            ],
+            "rows_per_page": 20
+        },
+        {
+            "key": "field_5cf910319611a",
+            "label": "Datasheet external",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5fb52a0a96ead",
+            "label": "Datasheet availability",
+            "name": "datasheet_availability",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Do we have sufficient specifications availble from the supplier?  If not choose NO and no specification information will be displayed. If we have sufficient specification information choose YES and fill out the reuired fields",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "YES": "YES",
+                "NO": "NO"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5efc994a9cdb9",
+            "label": "Product specifications",
+            "name": "product_specifications_&_certifcate_of_analysis",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Collected data from all specs given by the suppliers covered in one general spec covering the spcs from the single suppliers",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add Row",
+            "sub_fields": [
+                {
+                    "key": "field_5efc994a9cdba",
+                    "label": "Test",
+                    "name": "test",
+                    "aria-label": "",
+                    "type": "taxonomy",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "taxonomy": "specifications",
+                    "field_type": "select",
+                    "allow_null": 0,
+                    "add_term": 1,
+                    "save_terms": 1,
+                    "load_terms": 0,
+                    "return_format": "object",
+                    "multiple": 0,
+                    "bidirectional_target": [],
+                    "parent_repeater": "field_5efc994a9cdb9"
+                },
+                {
+                    "key": "field_5efc994a9cdbb",
+                    "label": "Test method",
+                    "name": "test_method",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "parent_repeater": "field_5efc994a9cdb9"
+                },
+                {
+                    "key": "field_5efc994a9cdbc",
+                    "label": "Product specification",
+                    "name": "product_specification",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Fill out like this: \r\nNumberNumber,NumberNumber min or max = 99,00 min\r\n\r\nIf it is a range fill out like this:\r\nNumberNumber,NumberNumber-NumberNumber,NumberNumber = 126,00-131,89",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "parent_repeater": "field_5efc994a9cdb9"
+                }
+            ],
+            "rows_per_page": 20
+        },
+        {
+            "key": "field_5efc9b89c950a",
+            "label": "Colour of the product",
+            "name": "colour_of_the_product",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5efc9b91c9511",
+            "label": "Shelf life (months)",
+            "name": "shelf_life_months",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Shelf life given by all sources based on maximum given shelf life",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5fbd0a3f23c90",
+            "label": "Standard dosage %",
+            "name": "standard_dosage_%",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "0.00 - 0.00",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5fc5326faf756",
+            "label": "Synergystic products",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5fc53280af757",
+            "label": "Synergystic products",
+            "name": "synergystic_products",
+            "aria-label": "",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "products"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search"
+            ],
+            "elements": "",
+            "min": "",
+            "max": "",
+            "return_format": "object",
+            "bidirectional_target": []
+        },
+        {
+            "key": "field_5f58ccb788eea",
+            "label": "Dangerous goods status",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5f58dee6845a2",
+            "label": "Dangerous goods status",
+            "name": "dangerous_goods_status",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 1,
+            "max": 0,
+            "layout": "row",
+            "button_label": "Add Row",
+            "sub_fields": [
+                {
+                    "key": "field_5f58dee6845a3",
+                    "label": "Status",
+                    "name": "status",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "0",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Dangerous": "Dangerous",
+                        "Non Dangerous": "Non Dangerous"
+                    },
+                    "default_value": "Non Dangerous",
+                    "allow_null": 1,
+                    "multiple": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": "",
+                    "parent_repeater": "field_5f58dee6845a2"
+                },
+                {
+                    "key": "field_5f58dee6845a4",
+                    "label": "Class",
+                    "name": "class",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5f58dee6845a3",
+                                "operator": "==",
+                                "value": "Dangerous"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "- select -": "- select -",
+                        "1 Explosives": "1 Explosives",
+                        "2.1 Flammable gases": "2.1 Flammable gases",
+                        "2.2 Non-toxic and non-flammable gases": "2.2 Non-toxic and non-flammable gases",
+                        "2.3 Poison gases": "2.3 Poison gases",
+                        "3 Flammable liquids": "3 Flammable liquids",
+                        "4.1 Flammable solids": "4.1 Flammable solids",
+                        "4.2 Spontaneously combustibles": "4.2 Spontaneously combustibles",
+                        "4.3 Dangerous when wet": "4.3 Dangerous when wet",
+                        "5.1 Oxidizers": "5.1 Oxidizers",
+                        "5.2 Organic peroxides": "5.2 Organic peroxides",
+                        "6.1 Poison": "6.1 Poison",
+                        "6.2 Infectious substances": "6.2 Infectious substances",
+                        "7 Radioactive": "7 Radioactive",
+                        "8 Corrosive": "8 Corrosive",
+                        "9 Miscellaneous dangerous substances": "9 Miscellaneous dangerous substances",
+                        "9A Lithium Ion Batteries": "9A Lithium Ion Batteries"
+                    },
+                    "default_value": false,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": "",
+                    "parent_repeater": "field_5f58dee6845a2"
+                },
+                {
+                    "key": "field_5f58dee6845a5",
+                    "label": "UN Code",
+                    "name": "un_code",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5f58dee6845a3",
+                                "operator": "==",
+                                "value": "Dangerous"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "- select -": "- select -",
+                        "UN 1219": "UN 1219",
+                        "UN 1454": "UN 1454",
+                        "UN 2056": "UN 2056",
+                        "UN 3077": "UN 3077",
+                        "UN 3082": "UN 3082",
+                        "UN 3092": "UN 3092",
+                        "UN 1325": "UN 1325"
+                    },
+                    "default_value": false,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": "",
+                    "parent_repeater": "field_5f58dee6845a2"
+                },
+                {
+                    "key": "field_5f58dee6845a6",
+                    "label": "Packaging Group",
+                    "name": "packaging_group",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5f58dee6845a3",
+                                "operator": "==",
+                                "value": "Dangerous"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "- select -": "- select -",
+                        "I": "I",
+                        "II": "II",
+                        "III": "III"
+                    },
+                    "default_value": false,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": "",
+                    "parent_repeater": "field_5f58dee6845a2"
+                }
+            ],
+            "rows_per_page": 20
+        },
+        {
+            "key": "field_5f1ec3c368386",
+            "label": "Features & Properties",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5ceea25389ca9",
+            "label": "Features & Properties",
+            "name": "features__highlights",
+            "aria-label": "",
+            "type": "taxonomy",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "features",
+            "field_type": "multi_select",
+            "allow_null": 0,
+            "add_term": 1,
+            "save_terms": 1,
+            "load_terms": 1,
+            "return_format": "object",
+            "multiple": 0,
+            "bidirectional_target": []
+        },
+        {
+            "key": "field_5fbf8cfbb29de",
+            "label": "Features & Properties",
+            "name": "features__highlights_copy",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_5d24ef16fe410",
+            "label": "Origin",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5cf90e1333cca",
+            "label": "Origin",
+            "name": "origin",
+            "aria-label": "",
+            "type": "checkbox",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "In-house production": "In-house production",
+                "Certified toll-manufacturers": "Certified toll-manufacturers",
+                "Trade & Distribute (buy, store and sell)": "Trade & Distribute (buy, store and sell)"
+            },
+            "allow_custom": 0,
+            "default_value": [],
+            "layout": "vertical",
+            "toggle": 0,
+            "return_format": "value",
+            "save_custom": 0,
+            "custom_choice_button_text": "Add new choice"
+        },
+        {
+            "key": "field_5ee34c79c9d41",
+            "label": "Stock availability",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5ee34c9fc9d42",
+            "label": "Stock availability",
+            "name": "stock_availability__copy",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Stock available": "Stock available",
+                "No stock available": "No stock available"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5e9dbbda00761",
+            "label": "Stock availability",
+            "name": "stock_availability",
+            "aria-label": "",
+            "type": "checkbox",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Europe": "Europe",
+                "Middle East": "Middle East",
+                "China": "China",
+                "USA": "USA"
+            },
+            "allow_custom": 0,
+            "default_value": [],
+            "layout": "horizontal",
+            "toggle": 0,
+            "return_format": "value",
+            "save_custom": 0,
+            "custom_choice_button_text": "Add new choice"
+        },
+        {
+            "key": "field_5dc3e6a2a6045",
+            "label": "Synonyms I Acronym I Chemicals names",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5ceea1bb89ca7",
+            "label": "Synonyms",
+            "name": "synonyms",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Add the filter search keywords for the Product, such as title (variations), synonyms, cas no. etc.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfbs_allow_search": 1,
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_5f635c36f3725",
+            "label": "Regulatory data",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5f635c6bf3726",
+            "label": "Regulatory data",
+            "name": "regulatory_data",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Save underlaying documents on the server",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 1,
+            "max": 1,
+            "layout": "row",
+            "button_label": "Add Row",
+            "sub_fields": [
+                {
+                    "key": "field_5fb643670d472",
+                    "label": "EU food contact 10\/2011 declaration",
+                    "name": "eu_food_contact_102011_declaration",
+                    "aria-label": "",
+                    "type": "checkbox",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Compliant": "Compliant",
+                        "Not compliant": "Not compliant"
+                    },
+                    "allow_custom": 0,
+                    "default_value": [],
+                    "layout": "vertical",
+                    "toggle": 0,
+                    "return_format": "value",
+                    "save_custom": 0,
+                    "custom_choice_button_text": "Add new choice",
+                    "parent_repeater": "field_5f635c6bf3726"
+                },
+                {
+                    "key": "field_5fb643be0d473",
+                    "label": "EU food contact 2002\/72\/EG declaration",
+                    "name": "eu_food_contact_200272eg_declaration_",
+                    "aria-label": "",
+                    "type": "checkbox",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Compliant": "Compliant",
+                        "Not compliant": "Not compliant"
+                    },
+                    "allow_custom": 0,
+                    "default_value": [],
+                    "layout": "vertical",
+                    "toggle": 0,
+                    "return_format": "value",
+                    "save_custom": 0,
+                    "custom_choice_button_text": "Add new choice",
+                    "parent_repeater": "field_5f635c6bf3726"
+                },
+                {
+                    "key": "field_5fb643e00d474",
+                    "label": "REACH",
+                    "name": "reach",
+                    "aria-label": "",
+                    "type": "checkbox",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Compliant": "Compliant",
+                        "Not compliant": "Not compliant"
+                    },
+                    "allow_custom": 0,
+                    "default_value": [],
+                    "layout": "vertical",
+                    "toggle": 0,
+                    "return_format": "value",
+                    "save_custom": 0,
+                    "custom_choice_button_text": "Add new choice",
+                    "parent_repeater": "field_5f635c6bf3726"
+                },
+                {
+                    "key": "field_5fb793f0265b0",
+                    "label": "Inventory of Existing Chemical Substances in China (IECSC)",
+                    "name": "inventory_of_existing_chemical_substances_in_china_iecsc",
+                    "aria-label": "",
+                    "type": "checkbox",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Compliant": "Compliant",
+                        "Not compliant": "Not compliant"
+                    },
+                    "allow_custom": 0,
+                    "default_value": [],
+                    "layout": "vertical",
+                    "toggle": 0,
+                    "return_format": "value",
+                    "save_custom": 0,
+                    "custom_choice_button_text": "Add new choice",
+                    "parent_repeater": "field_5f635c6bf3726"
+                },
+                {
+                    "key": "field_5fb79412265b1",
+                    "label": "Japan Inventory of Existing and Notified Substances (ENCS)",
+                    "name": "japan_inventory_of_existing_and_notified_substances_encs",
+                    "aria-label": "",
+                    "type": "checkbox",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Compliant": "Compliant",
+                        "Not compliant": "Not compliant"
+                    },
+                    "allow_custom": 0,
+                    "default_value": [],
+                    "layout": "vertical",
+                    "toggle": 0,
+                    "return_format": "value",
+                    "save_custom": 0,
+                    "custom_choice_button_text": "Add new choice",
+                    "parent_repeater": "field_5f635c6bf3726"
+                },
+                {
+                    "key": "field_5fb7942e265b2",
+                    "label": "Japan ISHL Existing Substances List (ISHL)",
+                    "name": "japan_ishl_existing_substances_list_ishl",
+                    "aria-label": "",
+                    "type": "checkbox",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Compliant": "Compliant",
+                        "Not compliant": "Not compliant"
+                    },
+                    "allow_custom": 0,
+                    "default_value": [],
+                    "layout": "vertical",
+                    "toggle": 0,
+                    "return_format": "value",
+                    "save_custom": 0,
+                    "custom_choice_button_text": "Add new choice",
+                    "parent_repeater": "field_5f635c6bf3726"
+                },
+                {
+                    "key": "field_5fb7943f265b3",
+                    "label": "Korea Existing Chemicals List (KECL)",
+                    "name": "korea_existing_chemicals_list_kecl",
+                    "aria-label": "",
+                    "type": "checkbox",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Compliant": "Compliant",
+                        "Not compliant": "Not compliant"
+                    },
+                    "allow_custom": 0,
+                    "default_value": [],
+                    "layout": "vertical",
+                    "toggle": 0,
+                    "return_format": "value",
+                    "save_custom": 0,
+                    "custom_choice_button_text": "Add new choice",
+                    "parent_repeater": "field_5f635c6bf3726"
+                },
+                {
+                    "key": "field_5fb79453265b4",
+                    "label": "Taiwan Chemical Substance Inventory (TCSI)",
+                    "name": "taiwan_chemical_substance_inventory_tcsi",
+                    "aria-label": "",
+                    "type": "checkbox",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Compliant": "Compliant",
+                        "Not compliant": "Not compliant"
+                    },
+                    "allow_custom": 0,
+                    "default_value": [],
+                    "layout": "vertical",
+                    "toggle": 0,
+                    "return_format": "value",
+                    "save_custom": 0,
+                    "custom_choice_button_text": "Add new choice",
+                    "parent_repeater": "field_5f635c6bf3726"
+                },
+                {
+                    "key": "field_5fb7984d265c3",
+                    "label": "Toxic Substances Control Act of 1976 (TSCA)",
+                    "name": "toxic_substances_control_act_of_1976_tsca",
+                    "aria-label": "",
+                    "type": "checkbox",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Compliant": "Compliant",
+                        "Not compliant": "Not compliant"
+                    },
+                    "allow_custom": 0,
+                    "default_value": [],
+                    "layout": "vertical",
+                    "toggle": 0,
+                    "return_format": "value",
+                    "save_custom": 0,
+                    "custom_choice_button_text": "Add new choice",
+                    "parent_repeater": "field_5f635c6bf3726"
+                },
+                {
+                    "key": "field_5fbfbf9a44e49",
+                    "label": "EU No.  (EINECS\/ELINCS\/NLP)",
+                    "name": "eu_no__einecselincsnlp",
+                    "aria-label": "",
+                    "type": "checkbox",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Compliant": "Compliant",
+                        "Not compliant": "Not compliant"
+                    },
+                    "allow_custom": 0,
+                    "default_value": [],
+                    "layout": "vertical",
+                    "toggle": 0,
+                    "return_format": "value",
+                    "save_custom": 0,
+                    "custom_choice_button_text": "Add new choice",
+                    "parent_repeater": "field_5f635c6bf3726"
+                },
+                {
+                    "key": "field_5fb644760d476",
+                    "label": "FDA US Food and Drug administration",
+                    "name": "fda_us_food_and_drug_administration",
+                    "aria-label": "",
+                    "type": "checkbox",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Compliant": "Compliant",
+                        "Not compliant": "Not compliant"
+                    },
+                    "allow_custom": 0,
+                    "default_value": [],
+                    "layout": "vertical",
+                    "toggle": 0,
+                    "return_format": "value",
+                    "save_custom": 0,
+                    "custom_choice_button_text": "Add new choice",
+                    "parent_repeater": "field_5f635c6bf3726"
+                },
+                {
+                    "key": "field_5fb6449f0d477",
+                    "label": "Directive 200\/96\/EC Waste Electrical and Electronic Equipment (WEEE) declaration",
+                    "name": "directive_20096ec_waste_electrical_and_electronic_equipment_weee_declaration",
+                    "aria-label": "",
+                    "type": "checkbox",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Compliant": "Compliant",
+                        "Not compliant": "Not compliant"
+                    },
+                    "allow_custom": 0,
+                    "default_value": [],
+                    "layout": "vertical",
+                    "toggle": 0,
+                    "return_format": "value",
+                    "save_custom": 0,
+                    "custom_choice_button_text": "Add new choice",
+                    "parent_repeater": "field_5f635c6bf3726"
+                },
+                {
+                    "key": "field_5fb79899265c4",
+                    "label": "Directive 94\/62\/EC on Packaging and Packaging waste",
+                    "name": "directive_9462ec_on_packaging_and_packaging_waste",
+                    "aria-label": "",
+                    "type": "checkbox",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Compliant": "Compliant",
+                        "Not compliant": "Not compliant"
+                    },
+                    "allow_custom": 0,
+                    "default_value": [],
+                    "layout": "vertical",
+                    "toggle": 0,
+                    "return_format": "value",
+                    "save_custom": 0,
+                    "custom_choice_button_text": "Add new choice",
+                    "parent_repeater": "field_5f635c6bf3726"
+                },
+                {
+                    "key": "field_5fb644a50d478",
+                    "label": "Safety of Toys standard of EN 71: Part 3: 1994",
+                    "name": "safety_of_toys_standard_of_en_71:_part_3:_1994",
+                    "aria-label": "",
+                    "type": "checkbox",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Compliant": "Compliant",
+                        "Not compliant": "Not compliant"
+                    },
+                    "allow_custom": 0,
+                    "default_value": [],
+                    "layout": "vertical",
+                    "toggle": 0,
+                    "return_format": "value",
+                    "save_custom": 0,
+                    "custom_choice_button_text": "Add new choice",
+                    "parent_repeater": "field_5f635c6bf3726"
+                }
+            ],
+            "rows_per_page": 20
+        },
+        {
+            "key": "field_5ee34bcfc9d3f",
+            "label": "Status of product",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5ee34bfec9d40",
+            "label": "Status of product",
+            "name": "status_of_product",
+            "aria-label": "",
+            "type": "checkbox",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Shortage": "Shortage",
+                "New development": "New development"
+            },
+            "allow_custom": 1,
+            "save_custom": 1,
+            "default_value": [],
+            "layout": "vertical",
+            "toggle": 0,
+            "return_format": "value",
+            "custom_choice_button_text": "Add new choice"
+        },
+        {
+            "key": "field_5df0c1059a660",
+            "label": "Product visuals",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5df0c1159a661",
+            "label": "Product picture",
+            "name": "product_picture_copy",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5df0c1689a663",
+            "label": "Product molecular drawing(s)",
+            "name": "product_molecular_drawings",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 1,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add Row",
+            "sub_fields": [
+                {
+                    "key": "field_5df0c60e9e938",
+                    "label": "Product molecular drawing(s) (copy)",
+                    "name": "product_molecular_drawings_copy",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "parent_repeater": "field_5df0c1689a663"
+                }
+            ],
+            "rows_per_page": 20
+        },
+        {
+            "key": "field_5dc3e78ca6046",
+            "label": "Price drivers",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5cee9eae76a69",
+            "label": "Feedstock",
+            "name": "feedstock",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_5cee9ec476a6a",
+            "min": 1,
+            "max": 1,
+            "layout": "row",
+            "button_label": "Add Row",
+            "sub_fields": [
+                {
+                    "key": "field_5cee9ec476a6a",
+                    "label": "Raw material A",
+                    "name": "raw_material_a",
+                    "aria-label": "",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 1,
+                    "max": 1,
+                    "layout": "table",
+                    "button_label": "Add Row",
+                    "sub_fields": [
+                        {
+                            "key": "field_5cf90478aa9c8",
+                            "label": "Chemical name",
+                            "name": "chemical_name",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "parent_repeater": "field_5cee9ec476a6a"
+                        },
+                        {
+                            "key": "field_5cf9048aaa9c9",
+                            "label": "CAS Number",
+                            "name": "cas_number",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "parent_repeater": "field_5cee9ec476a6a"
+                        }
+                    ],
+                    "rows_per_page": 20,
+                    "parent_repeater": "field_5cee9eae76a69"
+                },
+                {
+                    "key": "field_5cf904a1aa9ca",
+                    "label": "Raw material B",
+                    "name": "raw_material_b",
+                    "aria-label": "",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 1,
+                    "max": 1,
+                    "layout": "table",
+                    "button_label": "Add Row",
+                    "sub_fields": [
+                        {
+                            "key": "field_5cf904a1aa9cb",
+                            "label": "Chemical name",
+                            "name": "chemical_name",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "parent_repeater": "field_5cf904a1aa9ca"
+                        },
+                        {
+                            "key": "field_5cf904a1aa9cc",
+                            "label": "CAS Number",
+                            "name": "cas_number",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "parent_repeater": "field_5cf904a1aa9ca"
+                        }
+                    ],
+                    "rows_per_page": 20,
+                    "parent_repeater": "field_5cee9eae76a69"
+                },
+                {
+                    "key": "field_5cf904adaa9cd",
+                    "label": "Raw material C",
+                    "name": "raw_material_c",
+                    "aria-label": "",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 1,
+                    "max": 1,
+                    "layout": "table",
+                    "button_label": "Add Row",
+                    "sub_fields": [
+                        {
+                            "key": "field_5cf904aeaa9ce",
+                            "label": "Chemical name",
+                            "name": "chemical_name",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "parent_repeater": "field_5cf904adaa9cd"
+                        },
+                        {
+                            "key": "field_5cf904aeaa9cf",
+                            "label": "CAS Number",
+                            "name": "cas_number",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "parent_repeater": "field_5cf904adaa9cd"
+                        }
+                    ],
+                    "rows_per_page": 20,
+                    "parent_repeater": "field_5cee9eae76a69"
+                }
+            ],
+            "rows_per_page": 20
+        },
+        {
+            "key": "field_5d021abd87c6f",
+            "label": "Other then feedstock price drivers",
+            "name": "other_then_feedstock_price_drivers",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_5f058aa53173e",
+            "label": "Product Buttons",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5f60b2ed0efd4",
+            "label": "Add Buttons",
+            "name": "buttons_repeater",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add Row",
+            "sub_fields": [
+                {
+                    "key": "field_5f60b2ed0efd5",
+                    "label": "Type",
+                    "name": "type",
+                    "aria-label": "",
+                    "type": "button_group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "link": "Link",
+                        "file": "File"
+                    },
+                    "allow_null": 0,
+                    "default_value": "",
+                    "layout": "horizontal",
+                    "return_format": "value",
+                    "parent_repeater": "field_5f60b2ed0efd4"
+                },
+                {
+                    "key": "field_5f60b2f90efd6",
+                    "label": "Link",
+                    "name": "link",
+                    "aria-label": "",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5f60b2ed0efd5",
+                                "operator": "==",
+                                "value": "link"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "parent_repeater": "field_5f60b2ed0efd4"
+                },
+                {
+                    "key": "field_5f60bea0643f2",
+                    "label": "File Label",
+                    "name": "label",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5f60b2ed0efd5",
+                                "operator": "==",
+                                "value": "file"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "parent_repeater": "field_5f60b2ed0efd4"
+                },
+                {
+                    "key": "field_5f60b4970efd7",
+                    "label": "File",
+                    "name": "file",
+                    "aria-label": "",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5f60b2ed0efd5",
+                                "operator": "==",
+                                "value": "file"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "collapsed": "",
+                    "min": 0,
+                    "max": 0,
+                    "layout": "table",
+                    "button_label": "Add Row",
+                    "sub_fields": [
+                        {
+                            "key": "field_5f60b4c70efd9",
+                            "label": "File",
+                            "name": "file",
+                            "aria-label": "",
+                            "type": "file",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "library": "all",
+                            "min_size": "",
+                            "max_size": "",
+                            "mime_types": "",
+                            "parent_repeater": "field_5f60b4970efd7"
+                        },
+                        {
+                            "key": "field_5f60b4b10efd8",
+                            "label": "Language",
+                            "name": "language",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "parent_repeater": "field_5f60b4970efd7"
+                        }
+                    ],
+                    "rows_per_page": 20,
+                    "parent_repeater": "field_5f60b2ed0efd4"
+                }
+            ],
+            "rows_per_page": 20
+        },
+        {
+            "key": "field_5f05837793fb6",
+            "label": "Product Tabs",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5f05838c93fb7",
+            "label": "Add Tabs",
+            "name": "tabs_repeater",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add Row",
+            "sub_fields": [
+                {
+                    "key": "field_5f0583ed93fb8",
+                    "label": "Title",
+                    "name": "title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "parent_repeater": "field_5f05838c93fb7"
+                },
+                {
+                    "key": "field_5f0583f393fb9",
+                    "label": "Text",
+                    "name": "text",
+                    "aria-label": "",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0,
+                    "parent_repeater": "field_5f05838c93fb7"
+                },
+                {
+                    "key": "field_5f0583fc93fba",
+                    "label": "Internal use",
+                    "name": "internal",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 1,
+                    "ui_on_text": "",
+                    "ui_off_text": "",
+                    "parent_repeater": "field_5f05838c93fb7"
+                }
+            ],
+            "rows_per_page": 20
+        },
+        {
+            "key": "field_5fbfbb6dbdb26",
+            "label": "Archive",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5f75aa5a545ab",
+            "label": "Recommendations",
+            "name": "recommendations",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 1,
+            "max": 0,
+            "layout": "row",
+            "button_label": "New recommendation",
+            "sub_fields": [
+                {
+                    "key": "field_5fbbb11014905",
+                    "label": "Recommendation title",
+                    "name": "recommendation_title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "parent_repeater": "field_5f75aa5a545ab"
+                },
+                {
+                    "key": "field_5f75ab443a7c9",
+                    "label": "Recommendation description (Answer)",
+                    "name": "recommendation_description",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": "",
+                    "new_lines": "",
+                    "parent_repeater": "field_5f75aa5a545ab"
+                },
+                {
+                    "key": "field_5f76f3ab3c64b",
+                    "label": "Technical inquiry description (Question)",
+                    "name": "recommendation_description_copy",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": "",
+                    "new_lines": "",
+                    "parent_repeater": "field_5f75aa5a545ab"
+                },
+                {
+                    "key": "field_5f75aa7a545ac",
+                    "label": "Synergistic product(s)",
+                    "name": "product",
+                    "aria-label": "",
+                    "type": "relationship",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "products"
+                    ],
+                    "taxonomy": "",
+                    "filters": [
+                        "search"
+                    ],
+                    "elements": "",
+                    "min": "",
+                    "max": "",
+                    "return_format": "object",
+                    "bidirectional_target": [],
+                    "parent_repeater": "field_5f75aa5a545ab"
+                },
+                {
+                    "key": "field_5f75aacd545af",
+                    "label": "Prrocessing",
+                    "name": "prrocessing",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "-select-": "-select-",
+                        "Extrusion": "Extrusion",
+                        "Rotomolding": "Rotomolding"
+                    },
+                    "default_value": false,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": "",
+                    "parent_repeater": "field_5f75aa5a545ab"
+                }
+            ],
+            "rows_per_page": 20
+        },
+        {
+            "key": "field_5d137f951842b",
+            "label": "REACH declaration",
+            "name": "reach_declaration",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Compliant, no registration needed or not compliant with REACH",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Compliant": "Compliant",
+                "Not compliant": "Not compliant",
+                "No registration needed": "No registration needed"
+            },
+            "default_value": [],
+            "allow_null": 1,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5d137fa21842c",
+            "label": "REACH data",
+            "name": "reach_data",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d137f951842b",
+                        "operator": "==",
+                        "value": "Compliant"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add Row",
+            "sub_fields": [
+                {
+                    "key": "field_5d137fa31842d",
+                    "label": "Registration number",
+                    "name": "registration_number",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "parent_repeater": "field_5d137fa21842c"
+                },
+                {
+                    "key": "field_5d137fa31842e",
+                    "label": "Tonnage band (MT)",
+                    "name": "tonnage_band_mt",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "parent_repeater": "field_5d137fa21842c"
+                }
+            ],
+            "rows_per_page": 20
+        },
+        {
+            "key": "field_5cee910523cd6",
+            "label": "Product composition - USE THE NEW FIELD LABEL",
+            "name": "product_composition",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "Which chemicals does the product consists of? Is it one component with 1 CAS no. or more components with more CAS numbers; all components known must be listed and with thr correct %",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "sub_fields": [
+                {
+                    "key": "field_5d148ddf0cc15",
+                    "label": "Product name",
+                    "name": "product_name",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5d148e130cc17",
+                    "label": "CAS number(s)",
+                    "name": "cas_numbers",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5d148e1c0cc18",
+                    "label": "Chemical name(s)",
+                    "name": "chemical_names",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5d148e280cc19",
+                    "label": "Moleculair formula",
+                    "name": "molecular_formula",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5d148e300cc1a",
+                    "label": "Molecular weight (g\/mol)",
+                    "name": "molecular_weight",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5d148e020cc16",
+                    "label": "Product percentage of the blend",
+                    "name": "product_percentage_of_the_blend",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5d148e3e0cc1b",
+                    "label": "EU (EG-No (EINECS\/ELINCS))",
+                    "name": "eu_eg",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        },
+        {
+            "key": "field_5de12dcd84c25",
+            "label": "HS Code & Custom description EU",
+            "name": "hs_code_&_custom_description_eu",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5e739eea9e950",
+                    "label": "Last update",
+                    "name": "",
+                    "aria-label": "",
+                    "type": "tab",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "placement": "left",
+                    "endpoint": 0
+                },
+                {
+                    "key": "field_5de12fea07acb",
+                    "label": "Last update",
+                    "name": "last_update",
+                    "aria-label": "",
+                    "type": "date_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "display_format": "d\/m\/Y",
+                    "return_format": "d\/m\/Y",
+                    "first_day": 1
+                },
+                {
+                    "key": "field_5de1302507acc",
+                    "label": "Updated by (partners in chemicals employee)",
+                    "name": "updated_by_partners_in_chemicals_employee",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5e739f2e9e951",
+                    "label": "HS code EU",
+                    "name": "",
+                    "aria-label": "",
+                    "type": "tab",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "placement": "top",
+                    "endpoint": 0
+                },
+                {
+                    "key": "field_5de12dcd84c26",
+                    "label": "HS code EU",
+                    "name": "hs_code_eu",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "https:\/\/ec.europa.eu\/taxation_customs\/dds2\/ecics\/chemicalsubstance_consultation.jsp?",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5e73a076ba37b",
+                    "label": "Duty suspension code EU",
+                    "name": "",
+                    "aria-label": "",
+                    "type": "tab",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "placement": "left",
+                    "endpoint": 0
+                },
+                {
+                    "key": "field_5de12dcd84c28",
+                    "label": "Duty suspension code EU",
+                    "name": "duty_suspension_code_eu",
+                    "aria-label": "",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Yes": "Yes",
+                        "No": "No"
+                    },
+                    "allow_null": 1,
+                    "other_choice": 0,
+                    "default_value": "",
+                    "layout": "vertical",
+                    "return_format": "value",
+                    "save_other_choice": 0
+                },
+                {
+                    "key": "field_5de12dcd84c27",
+                    "label": "Additional code EU",
+                    "name": "additional_code_eu",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5de12dcd84c28",
+                                "operator": "==",
+                                "value": "Yes"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5e73a18b4de0e",
+                    "label": "Duties % of suspension",
+                    "name": "duties_%_of_suspension",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5de12dcd84c28",
+                                "operator": "==",
+                                "value": "Yes"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5e78e72a4305c",
+                    "label": "Suspension valid until",
+                    "name": "suspension_valid_until",
+                    "aria-label": "",
+                    "type": "date_picker",
+                    "instructions": "If no date is filled out the date of expiration of the suspnension is unknown",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5de12dcd84c28",
+                                "operator": "==",
+                                "value": "Yes"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "display_format": "d-m-Y",
+                    "return_format": "d\/m\/Y",
+                    "first_day": 1
+                },
+                {
+                    "key": "field_5e73a090ba37c",
+                    "label": "BTI code EU",
+                    "name": "",
+                    "aria-label": "",
+                    "type": "tab",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "placement": "left",
+                    "endpoint": 0
+                },
+                {
+                    "key": "field_5e73a1cd4de0f",
+                    "label": "BTI code EU",
+                    "name": "bti_code_eu_",
+                    "aria-label": "",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Yes": "Yes",
+                        "No": "No"
+                    },
+                    "allow_null": 1,
+                    "other_choice": 0,
+                    "default_value": "",
+                    "layout": "vertical",
+                    "return_format": "value",
+                    "save_other_choice": 0
+                },
+                {
+                    "key": "field_5dd562896c1c8",
+                    "label": "BTI code EU",
+                    "name": "bti_code_eu",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5e73a1cd4de0f",
+                                "operator": "==",
+                                "value": "Yes"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5e73a1fa4de10",
+                    "label": "Duties % of BTI",
+                    "name": "duties_%_of_bti",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5e73a1cd4de0f",
+                                "operator": "==",
+                                "value": "Yes"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5e78e7754305d",
+                    "label": "BTI valid until",
+                    "name": "bti_valid_until",
+                    "aria-label": "",
+                    "type": "date_picker",
+                    "instructions": "If no date is filled out the date of expiration of the BTI is unknown",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5e73a1cd4de0f",
+                                "operator": "==",
+                                "value": "Yes"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "display_format": "d-m-Y",
+                    "return_format": "d\/m\/Y",
+                    "first_day": 1
+                },
+                {
+                    "key": "field_5e73a0ccba37d",
+                    "label": "Duties % import EU",
+                    "name": "",
+                    "aria-label": "",
+                    "type": "tab",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "placement": "top",
+                    "endpoint": 0
+                },
+                {
+                    "key": "field_5de12fcb07aca",
+                    "label": "Final duties % import",
+                    "name": "final_duties_%_import",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        },
+        {
+            "key": "field_5e749a336f728",
+            "label": "HS Code & Custom description USA NEW",
+            "name": "hs_code_&_custom_description_usa",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5e749a346f729",
+                    "label": "Last update",
+                    "name": "",
+                    "aria-label": "",
+                    "type": "tab",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "placement": "left",
+                    "endpoint": 0
+                },
+                {
+                    "key": "field_5e749a346f72a",
+                    "label": "Last update",
+                    "name": "last_update",
+                    "aria-label": "",
+                    "type": "date_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "display_format": "d\/m\/Y",
+                    "return_format": "d\/m\/Y",
+                    "first_day": 1
+                },
+                {
+                    "key": "field_5e749a346f72b",
+                    "label": "Updated by (partners in chemicals employee)",
+                    "name": "updated_by_partners_in_chemicals_employee",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5e749a346f72c",
+                    "label": "HS code USA",
+                    "name": "",
+                    "aria-label": "",
+                    "type": "tab",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "placement": "top",
+                    "endpoint": 0
+                },
+                {
+                    "key": "field_5e749a346f72d",
+                    "label": "HS code USA",
+                    "name": "hs_code_usa",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "https:\/\/ec.europa.eu\/taxation_customs\/dds2\/ecics\/chemicalsubstance_consultation.jsp?",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5e749a346f72e",
+                    "label": "Duty suspension code USA",
+                    "name": "",
+                    "aria-label": "",
+                    "type": "tab",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "placement": "left",
+                    "endpoint": 0
+                },
+                {
+                    "key": "field_5e749a346f72f",
+                    "label": "Duty suspension code USA",
+                    "name": "duty_suspension_code_usa",
+                    "aria-label": "",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Yes": "Yes",
+                        "No": "No"
+                    },
+                    "allow_null": 1,
+                    "other_choice": 0,
+                    "default_value": "",
+                    "layout": "vertical",
+                    "return_format": "value",
+                    "save_other_choice": 0
+                },
+                {
+                    "key": "field_5e749a346f730",
+                    "label": "Additional code USA",
+                    "name": "additional_code_usa",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5e749a346f72f",
+                                "operator": "==",
+                                "value": "Yes"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5e749a346f731",
+                    "label": "Duties % of suspension",
+                    "name": "duties_%_of_suspension",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5e749a346f72f",
+                                "operator": "==",
+                                "value": "Yes"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5e749a346f732",
+                    "label": "BTI code USA",
+                    "name": "",
+                    "aria-label": "",
+                    "type": "tab",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "placement": "left",
+                    "endpoint": 0
+                },
+                {
+                    "key": "field_5e749a346f733",
+                    "label": "BTI code USA",
+                    "name": "bti_code_eu_",
+                    "aria-label": "",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Yes": "Yes",
+                        "No": "No"
+                    },
+                    "allow_null": 1,
+                    "other_choice": 0,
+                    "default_value": "",
+                    "layout": "vertical",
+                    "return_format": "value",
+                    "save_other_choice": 0
+                },
+                {
+                    "key": "field_5e749a346f734",
+                    "label": "BTI code USA",
+                    "name": "bti_code_eu",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5e749a346f733",
+                                "operator": "==",
+                                "value": "Yes"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5e749a346f735",
+                    "label": "Duties % of BTI",
+                    "name": "duties_%_of_bti",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5e749a346f733",
+                                "operator": "==",
+                                "value": "Yes"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5e749a346f736",
+                    "label": "Duties % import EU",
+                    "name": "",
+                    "aria-label": "",
+                    "type": "tab",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "placement": "top",
+                    "endpoint": 0
+                },
+                {
+                    "key": "field_5e749a346f737",
+                    "label": "Final duties % import",
+                    "name": "final_duties_%_import",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        },
+        {
+            "key": "field_5de12dee84c29",
+            "label": "HS Code & Custom description USA DO NOT USE COPY TO USA NEW AND USE USA NEW",
+            "name": "hs_code_&_custom_description_usa",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5de12dee84c2a",
+                    "label": "HS code USA",
+                    "name": "hs_code_usa",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5de12dee84c2b",
+                    "label": "Additional code USA",
+                    "name": "additional_code_usa",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5de12dee84c2c",
+                    "label": "Duty suspension code USA",
+                    "name": "duty_suspension_code_usa",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5dd562d16c1cb",
+                    "label": "BTI code USA",
+                    "name": "bti_code_usa",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5de1305c07acd",
+                    "label": "Duties % import USA",
+                    "name": "duties_%_import_usa",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5de1308c07ace",
+                    "label": "Last update",
+                    "name": "last_update",
+                    "aria-label": "",
+                    "type": "date_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "display_format": "d\/m\/Y",
+                    "return_format": "d\/m\/Y",
+                    "first_day": 1
+                },
+                {
+                    "key": "field_5de130a007acf",
+                    "label": "Updated by (partners in chemicals employee)",
+                    "name": "updated_by_partners_in_chemicals_employee",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        },
+        {
+            "key": "field_5dc2fa5a030af",
+            "label": "TSCA",
+            "name": "tsca",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Go the website: https:\/\/ofmpub.epa.gov\/sor_internet\/registry\/substreg\/LandingPage.do\r\nIf listed = Compliant of not listed = Not Compliant",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Compliant": "Compliant",
+                "Not compliant": "Not compliant"
+            },
+            "default_value": false,
+            "allow_null": 1,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5d137cb7dd725",
+            "label": "EU food contact 10\/2011 declaration",
+            "name": "eu_food_contact_102011_declaration",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Compliant or not compliant to EU food contact regulations 10\/2011. Go to this website and fill out the CAS no. https:\/\/eur-lex.europa.eu\/LexUriServ\/LexUriServ.do?uri=OJ:L:2011:012:0001:0089:EN:PDF",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Compliant": "Compliant",
+                "Not compliant": "Not compliant"
+            },
+            "default_value": false,
+            "allow_null": 1,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5d08f8930cce3",
+            "label": "EU food contact 10\/2011 data",
+            "name": "eu_food_contact_102011_data",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d137cb7dd725",
+                        "operator": "==",
+                        "value": "Compliant"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add Row",
+            "sub_fields": [
+                {
+                    "key": "field_5d08f8aa0cce4",
+                    "label": "(1) FCM Substance number",
+                    "name": "1_fcm_substance_number",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "parent_repeater": "field_5d08f8930cce3"
+                },
+                {
+                    "key": "field_5d08f8b70cce5",
+                    "label": "(2) Reference number",
+                    "name": "2_reference_number",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "parent_repeater": "field_5d08f8930cce3"
+                },
+                {
+                    "key": "field_5d08fa0a272eb",
+                    "label": "(3) CAS number(s)",
+                    "name": "3_cas_numbers",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "parent_repeater": "field_5d08f8930cce3"
+                },
+                {
+                    "key": "field_5d08fa29272ec",
+                    "label": "(4) Substance name",
+                    "name": "4_substance_name",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "parent_repeater": "field_5d08f8930cce3"
+                },
+                {
+                    "key": "field_5d08f8e20cce6",
+                    "label": "(5) Use as additive or polymer production aid (yes\/no)",
+                    "name": "5_use_as_additive_or_polymer_production_aid_yesno",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Select": "Select",
+                        "Yes": "Yes",
+                        "No": "No"
+                    },
+                    "default_value": [],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": "",
+                    "parent_repeater": "field_5d08f8930cce3"
+                },
+                {
+                    "key": "field_5d08f9050cce7",
+                    "label": "(6) Use as monomer or other starting substance or macromolecule obtained from microbial fermentation (yes\/no)",
+                    "name": "6_use_as_monomer_or_other_starting_substance_or_macromolecule_obtained_from_microbial_fermentation_yesno",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Select": "Select",
+                        "Yes": "Yes",
+                        "No": "No"
+                    },
+                    "default_value": [],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": "",
+                    "parent_repeater": "field_5d08f8930cce3"
+                },
+                {
+                    "key": "field_5d08f9200cce8",
+                    "label": "(7) FRF Applicable (yes\/no)",
+                    "name": "7_frf_applicable_yesno",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Select": "Select",
+                        "Yes": "Yes",
+                        "No": "No"
+                    },
+                    "default_value": [],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": "",
+                    "parent_repeater": "field_5d08f8930cce3"
+                },
+                {
+                    "key": "field_5d08f93b0cce9",
+                    "label": "(8) SML [mg\/kg]",
+                    "name": "8_sml_mgkg",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "parent_repeater": "field_5d08f8930cce3"
+                },
+                {
+                    "key": "field_5d08f94c0ccea",
+                    "label": "(9) SML (T) [mg\/kg] (Group restriction number)",
+                    "name": "9_sml_t_mgkg_group_restriction_number",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "parent_repeater": "field_5d08f8930cce3"
+                },
+                {
+                    "key": "field_5d08f95c0cceb",
+                    "label": "(10) Restrictions and specifications",
+                    "name": "10_restrictions_and_specifications",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "parent_repeater": "field_5d08f8930cce3"
+                },
+                {
+                    "key": "field_5d08f96e0ccec",
+                    "label": "(11) Notes on verification of compliance",
+                    "name": "11_notes_on_verification_of_compliance",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "parent_repeater": "field_5d08f8930cce3"
+                }
+            ],
+            "rows_per_page": 20
+        },
+        {
+            "key": "field_5d1380c318439",
+            "label": "EU food contact 2002\/72\/EG declaration",
+            "name": "eu_food_contact_200272eg_declaration",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Compliant or not compliant to EU food contact regulations 10\/2011. Go to this website and fill out the CAS no. https:\/\/eur-lex.europa.eu\/legal-content\/EN\/TXT\/PDF\/?uri=CELEX:32002L0072&from=EN",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Compliant": "Compliant",
+                "Not compliant": "Not compliant"
+            },
+            "default_value": false,
+            "allow_null": 1,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5d1380cf1843a",
+            "label": "EU food contact 2002\/72\/EG data",
+            "name": "eu_food_contact_200272eg_data",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d1380c318439",
+                        "operator": "==",
+                        "value": "Compliant"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add Row",
+            "sub_fields": [
+                {
+                    "key": "field_5d1380d01843c",
+                    "label": "(1) Directive reference number",
+                    "name": "1_directive_reference_number",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "parent_repeater": "field_5d1380cf1843a"
+                },
+                {
+                    "key": "field_5df0d23e6b547",
+                    "label": "(2) Cas no.",
+                    "name": "2_cas_no_",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "parent_repeater": "field_5d1380cf1843a"
+                },
+                {
+                    "key": "field_5df0d24e6b548",
+                    "label": "(3) name",
+                    "name": "3_name",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "parent_repeater": "field_5d1380cf1843a"
+                },
+                {
+                    "key": "field_5d1380d018445",
+                    "label": "(4) Specifications",
+                    "name": "4_specifications",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "parent_repeater": "field_5d1380cf1843a"
+                }
+            ],
+            "rows_per_page": 20
+        },
+        {
+            "key": "field_5f1ea60cdcaea",
+            "label": "FDA",
+            "name": "_copy",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "Has FDA or not?",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Yes": "Yes",
+                "No": "No"
+            },
+            "allow_null": 1,
+            "other_choice": 0,
+            "default_value": "",
+            "layout": "vertical",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_5e690a0177eed",
+            "label": "PART 175 -- INDIRECT FOOD ADDITIVES: ADHESIVES AND COMPONENTS OF COATINGS  Subpart B--Substances for Use Only as Components of Adhesives  Sec. 175.105 Adhesives",
+            "name": "part_175_--_indirect_food_additives:_adhesives_and_components_of_coatings__subpart_b--substances_for_use_only_as_components_of_adhesives__sec_175105_adhesives",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Go to website https:\/\/www.accessdata.fda.gov\/scripts\/cdrh\/cfdocs\/cfCFR\/CFRSearch.cfm?fr=175.105 and search based on CAS no.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Compliant": "Compliant",
+                "Not compliant": "Not compliant"
+            },
+            "default_value": false,
+            "allow_null": 1,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5e690a0777eee",
+            "label": "Limitations",
+            "name": "limitations",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Copy paste all limitations mentioned",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e690a0177eed",
+                        "operator": "==",
+                        "value": "Compliant"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_5e859ea38156c",
+            "label": "Last update",
+            "name": "last_update",
+            "aria-label": "",
+            "type": "date_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "d\/m\/Y",
+            "return_format": "d\/m\/Y",
+            "first_day": 1
+        },
+        {
+            "key": "field_5e859ea88156d",
+            "label": "Updated by (partners in chemicals employee)",
+            "name": "updated_by_partners_in_chemicals_employee",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5df0bed2cc3da",
+            "label": "PART 175 -- INDIRECT FOOD ADDITIVES: ADHESIVES AND COMPONENTS OF COATINGS  Subpart B--Substances for Use Only as Components of Adhesives  Sec. 175.125 Pressure-sensitive adhesives.",
+            "name": "part_175_--_indirect_food_additives:_adhesives_and_components_of_coatings__subpart_b--substances_for_use_only_as_components_of_adhesives__sec_175125_pressure-sensitive_adhesives",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Go to website https:\/\/www.accessdata.fda.gov\/scripts\/cdrh\/cfdocs\/cfcfr\/CFRSearch.cfm?fr=175.125 and search based on CAS no.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Compliant": "Compliant",
+                "Not compliant": "Not compliant"
+            },
+            "default_value": false,
+            "allow_null": 1,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5df0bf6dcc3dd",
+            "label": "Limitations",
+            "name": "limitations",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Copy paste all limitations mentioned",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5df0bed2cc3da",
+                        "operator": "==",
+                        "value": "Compliant"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_5e859f158156e",
+            "label": "Last update",
+            "name": "last_update",
+            "aria-label": "",
+            "type": "date_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "d\/m\/Y",
+            "return_format": "d\/m\/Y",
+            "first_day": 1
+        },
+        {
+            "key": "field_5e859f1b8156f",
+            "label": "Updated by (partners in chemicals employee)",
+            "name": "updated_by_partners_in_chemicals_employee",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5e68fe516f815",
+            "label": "PART 176 -- INDIRECT FOOD ADDITIVES: PAPER AND PAPERBOARD COMPONENTS",
+            "name": "part_176_--_indirect_food_additives:_paper_and_paperboard_components",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Go to website https:\/\/www.accessdata.fda.gov\/scripts\/cdrh\/cfdocs\/cfcfr\/CFRSearch.cfm?CFRPart=176 and search based on CAS no.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Compliant": "Compliant",
+                "Not compliant": "Not compliant"
+            },
+            "default_value": false,
+            "allow_null": 1,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5e68fe596f816",
+            "label": "Limitations",
+            "name": "limitations",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Copy paste all limitations mentioned",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e68fe516f815",
+                        "operator": "==",
+                        "value": "Compliant"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_5e859f4081570",
+            "label": "Last update",
+            "name": "last_update",
+            "aria-label": "",
+            "type": "date_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "d\/m\/Y",
+            "return_format": "d\/m\/Y",
+            "first_day": 1
+        },
+        {
+            "key": "field_5e859f4781571",
+            "label": "Updated by (partners in chemicals employee)",
+            "name": "updated_by_partners_in_chemicals_employee",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5e690b2677ef3",
+            "label": "PART 177 -- INDIRECT FOOD ADDITIVES: POLYMERS  Subpart B--Substances for Use as Basic Components of Single and Repeated Use Food Contact Surfaces  Sec. 177.1315 Ethylene-1, 4-cyclohexylene dimethylene terephthalate copolymers.",
+            "name": "part_177_--_indirect_food_additives:_polymers__subpart_b--substances_for_use_as_basic_components_of_single_and_repeated_use_food_contact_surfaces__sec_1771315_ethylene-1_4-cyclohexylene_dimethylene_terephthalate_copolymers",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Go to https:\/\/www.accessdata.fda.gov\/scripts\/cdrh\/cfdocs\/cfCFR\/CFRSearch.cfm?fr=177.1315 and search on CAS no.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Compliant": "Compliant",
+                "Not compliant": "Not compliant"
+            },
+            "default_value": false,
+            "allow_null": 1,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5e690b2077ef2",
+            "label": "Limitations",
+            "name": "limitations",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Copy paste all limitations mentioned",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e690b2677ef3",
+                        "operator": "==",
+                        "value": "Compliant"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_5e859f7481572",
+            "label": "Last update",
+            "name": "last_update",
+            "aria-label": "",
+            "type": "date_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "d\/m\/Y",
+            "return_format": "d\/m\/Y",
+            "first_day": 1
+        },
+        {
+            "key": "field_5e859f7881573",
+            "label": "Updated by (partners in chemicals employee)",
+            "name": "updated_by_partners_in_chemicals_employee",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5e690a9877eef",
+            "label": "PART 177 -- INDIRECT FOOD ADDITIVES: POLYMERS  Subpart B--Substances for Use as Basic Components of Single and Repeated Use Food Contact Surfaces  Sec. 177.1630 Polyethylene phthalate polymers",
+            "name": "part_177_--_indirect_food_additives:_polymers__subpart_b--substances_for_use_as_basic_components_of_single_and_repeated_use_food_contact_surfaces__sec_1771630_polyethylene_phthalate_polymers",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Go to https:\/\/www.accessdata.fda.gov\/scripts\/cdrh\/cfdocs\/cfCFR\/CFRSearch.cfm?fr=177.1630 and search on CAS no.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Compliant": "Compliant",
+                "Not compliant": "Not compliant"
+            },
+            "default_value": false,
+            "allow_null": 1,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5e690a9c77ef0",
+            "label": "Limitations",
+            "name": "limitations",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Copy paste all limitations mentioned",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e690a9877eef",
+                        "operator": "==",
+                        "value": "Compliant"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_5e859fa081574",
+            "label": "Last update",
+            "name": "last_update",
+            "aria-label": "",
+            "type": "date_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "d\/m\/Y",
+            "return_format": "d\/m\/Y",
+            "first_day": 1
+        },
+        {
+            "key": "field_5e859fa481575",
+            "label": "Updated by (partners in chemicals employee)",
+            "name": "updated_by_partners_in_chemicals_employee",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5de683f8e04a8",
+            "label": "PART 177 -- INDIRECT FOOD ADDITIVES: POLYMERS  Subpart B--Substances for Use as Basic Components of Single and Repeated Use Food Contact Surfaces  Sec. 177.1680 Polyurethane resins.",
+            "name": "part_177_--_indirect_food_additives:_polymers__subpart_b--substances_for_use_as_basic_components_of_single_and_repeated_use_food_contact_surfaces__sec_1771680_polyurethane_resins",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Go to https:\/\/www.accessdata.fda.gov\/scripts\/cdrh\/cfdocs\/cfcfr\/CFRSearch.cfm?fr=177.1680 and search on CAS no.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Compliant": "Compliant",
+                "Not compliant": "Not compliant"
+            },
+            "default_value": false,
+            "allow_null": 1,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5de6841ce04a9",
+            "label": "Limitations",
+            "name": "limitations_",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Copy paste all limitations mentioned",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5de683f8e04a8",
+                        "operator": "==",
+                        "value": "Compliant"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_5e859fcf81577",
+            "label": "Last update",
+            "name": "last_update",
+            "aria-label": "",
+            "type": "date_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "d\/m\/Y",
+            "return_format": "d\/m\/Y",
+            "first_day": 1
+        },
+        {
+            "key": "field_5e859fc881576",
+            "label": "Updated by (partners in chemicals employee)",
+            "name": "updated_by_partners_in_chemicals_employee_",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5e6901a5f5b7c",
+            "label": "PART 177 -- INDIRECT FOOD ADDITIVES: POLYMERS  Subpart B--Substances for Use as Basic Components of Single and Repeated Use Food Contact Surfaces  Sec. 177.2600 Rubber articles intended for repeated use",
+            "name": "part_177_--_indirect_food_additives:_polymers__subpart_b--substances_for_use_as_basic_components_of_single_and_repeated_use_food_contact_surfaces__sec_1772600_rubber_articles_intended_for_repeated_use",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Go to https:\/\/www.accessdata.fda.gov\/scripts\/cdrh\/cfdocs\/cfcfr\/CFRSearch.cfm?fr=177.2600&SearchTerm=991%2D84%2D4 and search on CAS no.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Compliant": "Compliant",
+                "Not compliant": "Not compliant"
+            },
+            "default_value": false,
+            "allow_null": 1,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5e690195f5b7a",
+            "label": "Limitations",
+            "name": "limitations",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Copy paste all limitations mentioned",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e6901a5f5b7c",
+                        "operator": "==",
+                        "value": "Compliant"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_5e859fea81578",
+            "label": "Last update",
+            "name": "last_update",
+            "aria-label": "",
+            "type": "date_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "d\/m\/Y",
+            "return_format": "d\/m\/Y",
+            "first_day": 1
+        },
+        {
+            "key": "field_5e859ff381579",
+            "label": "Updated by (partners in chemicals employee)",
+            "name": "updated_by_partners_in_chemicals_employee_",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5d13817518446",
+            "label": "PART 178 -- INDIRECT FOOD ADDITIVES: ADJUVANTS, PRODUCTION AIDS, AND SANITIZERS  Subpart C--Antioxidants and Stabilizers  Sec. 178.2010 Antioxidants and\/or stabilizers for polymers.",
+            "name": "cfr_title_21_-_178:_indirect_food_additives;_adjuvants_production_aids_and_sanitizers",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Go to website https:\/\/www.accessdata.fda.gov\/scripts\/cdrh\/cfdocs\/cfcfr\/CFRSearch.cfm?fr=178.2010 and search on CAS no.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Compliant": "Compliant",
+                "Not compliant": "Not compliant"
+            },
+            "default_value": false,
+            "allow_null": 1,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5de67ef810cb1",
+            "label": "Limitations",
+            "name": "limitations_",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Copy paste all limitations mentioned",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d13817518446",
+                        "operator": "==",
+                        "value": "Compliant"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_5e85a00e8157a",
+            "label": "Last update",
+            "name": "last_update",
+            "aria-label": "",
+            "type": "date_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "d\/m\/Y",
+            "return_format": "d\/m\/Y",
+            "first_day": 1
+        },
+        {
+            "key": "field_5e85a0148157b",
+            "label": "Updated by (partners in chemicals employee)",
+            "name": "updated_by_partners_in_chemicals_employee",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5df0bf5bcc3dc",
+            "label": "PART 178 -- INDIRECT FOOD ADDITIVES: ADJUVANTS, PRODUCTION AIDS, AND SANITIZERS  Subpart D--Certain Adjuvants and Production Aids  Sec. 178.3297 Colorants for polymers.",
+            "name": "part_178_--_indirect_food_additives:_adjuvants_production_aids_and_sanitizers__subpart_d--certain_adjuvants_and_production_aids__sec_1783297_colorants_for_polymers",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Go to website https:\/\/www.accessdata.fda.gov\/scripts\/cdrh\/cfdocs\/cfcfr\/CFRSearch.cfm?fr=178.3297 and search based on CAS no.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Compliant": "Compliant",
+                "Not compliant": "Not compliant"
+            },
+            "default_value": false,
+            "allow_null": 1,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5de68504276a8",
+            "label": "Limitations",
+            "name": "limitations",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Copy paste all limitations mentioned",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5df0bf5bcc3dc",
+                        "operator": "==",
+                        "value": "Compliant"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_5e85a0348157c",
+            "label": "Last update",
+            "name": "last_update",
+            "aria-label": "",
+            "type": "date_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "d\/m\/Y",
+            "return_format": "d\/m\/Y",
+            "first_day": 1
+        },
+        {
+            "key": "field_5e85a0388157d",
+            "label": "Updated by (partners in chemicals employee)",
+            "name": "updated_by_partners_in_chemicals_employee",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5de68495276a5",
+            "label": "PART 178 -- INDIRECT FOOD ADDITIVES: ADJUVANTS, PRODUCTION AIDS, AND SANITIZERS  Subpart D--Certain Adjuvants and Production Aids  Sec. 178.3570 Lubricants with incidental food contact.",
+            "name": "part_178_--_indirect_food_additives:_adjuvants_production_aids_and_sanitizers__subpart_d--certain_adjuvants_and_production_aids__sec_1783570_lubricants_with_incidental_food_contact",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Go to website https:\/\/www.accessdata.fda.gov\/scripts\/cdrh\/cfdocs\/cfcfr\/CFRSearch.cfm?fr=178.3570&SearchTerm=6683%2D19%2D8 and search on CAS no.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Compliant": "Compliant",
+                "Not compliant": "Not compliant"
+            },
+            "default_value": false,
+            "allow_null": 1,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5de684bc276a6",
+            "label": "Limitations",
+            "name": "limitations",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Copy paste all limitations mentioned",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5de68495276a5",
+                        "operator": "==",
+                        "value": "Compliant"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_5e85a0618157e",
+            "label": "Last update",
+            "name": "last_update",
+            "aria-label": "",
+            "type": "date_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "d\/m\/Y",
+            "return_format": "d\/m\/Y",
+            "first_day": 1
+        },
+        {
+            "key": "field_5e85a0648157f",
+            "label": "Updated by (partners in chemicals employee)",
+            "name": "updated_by_partners_in_chemicals_employee",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5e6900ebf5b78",
+            "label": "PART 178 -- INDIRECT FOOD ADDITIVES: ADJUVANTS, PRODUCTION AIDS, AND SANITIZERS  Subpart D--Certain Adjuvants and Production Aids  Sec. 178.3710 Petroleum wax",
+            "name": "part_178_--_indirect_food_additives:_adjuvants_production_aids_and_sanitizers__subpart_d--certain_adjuvants_and_production_aids__sec_1783710_petroleum_wax",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Go to website https:\/\/www.accessdata.fda.gov\/scripts\/cdrh\/cfdocs\/cfcfr\/CFRSearch.cfm?fr=178.3710 and search on CAS no.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Compliant": "Compliant",
+                "Not compliant": "Not compliant"
+            },
+            "default_value": false,
+            "allow_null": 1,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5e6900f6f5b79",
+            "label": "Limitations",
+            "name": "limitations",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Copy paste all limitations mentioned",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5e6900ebf5b78",
+                        "operator": "==",
+                        "value": "Compliant"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_5e85a08281580",
+            "label": "Last update",
+            "name": "last_update",
+            "aria-label": "",
+            "type": "date_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "d\/m\/Y",
+            "return_format": "d\/m\/Y",
+            "first_day": 1
+        },
+        {
+            "key": "field_5e85a09181582",
+            "label": "Updated by (partners in chemicals employee)",
+            "name": "updated_by_partners_in_chemicals_employee",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5de684dd276a7",
+            "label": "PART 178 -- INDIRECT FOOD ADDITIVES: ADJUVANTS, PRODUCTION AIDS, AND SANITIZERS  Subpart D--Certain Adjuvants and Production Aids  Sec. 178.3910 Surface lubricants used in the manufacture of metallic articles.",
+            "name": "part_178_--_indirect_food_additives:_adjuvants_production_aids_and_sanitizers__subpart_d--certain_adjuvants_and_production_aids__sec_1783910_surface_lubricants_used_in_the_manufacture_of_metallic_articles",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Go to website https:\/\/www.accessdata.fda.gov\/scripts\/cdrh\/cfdocs\/cfcfr\/CFRSearch.cfm?fr=178.3910&SearchTerm=6683%2D19%2D8 and search based on CAS no.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Compliant": "Compliant",
+                "Not compliant": "Not compliant"
+            },
+            "default_value": false,
+            "allow_null": 1,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5df0bf36cc3db",
+            "label": "Limitations",
+            "name": "limitations",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Copy paste all limitations mentioned",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5de684dd276a7",
+                        "operator": "==",
+                        "value": "Compliant"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_5e85a08581581",
+            "label": "Last update",
+            "name": "last_update",
+            "aria-label": "",
+            "type": "date_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "d\/m\/Y",
+            "return_format": "d\/m\/Y",
+            "first_day": 1
+        },
+        {
+            "key": "field_5e85a09581583",
+            "label": "Updated by (partners in chemicals employee)",
+            "name": "updated_by_partners_in_chemicals_employee",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5d1486322d506",
+            "label": "Directive 200\/96\/EC Waste Electrical and Electronic Equipment (WEEE) declaration",
+            "name": "directive_20096ec_waste_electrical_and_electronic_equipment_weee_declaration",
+            "aria-label": "",
+            "type": "checkbox",
+            "instructions": "Compliant or not compliant",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Compliant": "Compliant",
+                "Not compliant": "Not compliant"
+            },
+            "allow_custom": 0,
+            "default_value": [],
+            "layout": "vertical",
+            "toggle": 0,
+            "return_format": "value",
+            "save_custom": 0,
+            "custom_choice_button_text": "Add new choice"
+        },
+        {
+            "key": "field_5d1485c42d505",
+            "label": "Restriction of the use of certain hazardous substances (RoHS) declaration",
+            "name": "restriction_of_the_use_of_certain_hazardous_substances_rohs_declaration",
+            "aria-label": "",
+            "type": "checkbox",
+            "instructions": "Compliant or not compliant",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Compliant": "Compliant",
+                "Not compliant": "Not compliant"
+            },
+            "allow_custom": 0,
+            "default_value": [],
+            "layout": "vertical",
+            "toggle": 0,
+            "return_format": "value",
+            "save_custom": 0,
+            "custom_choice_button_text": "Add new choice"
+        },
+        {
+            "key": "field_5cf9170d08839",
+            "label": "Directive 94\/62\/EC on Packaging and Packaging waste",
+            "name": "directive_9462ec_on_packaging_and_packaging_waste",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Does or does not exceed the concentration levels of heavy metals. If it does not it is compliant.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "Compliant",
+            "ui_off_text": "Not compliant"
+        },
+        {
+            "key": "field_5d14864f2d507",
+            "label": "Safety of Toys standard of EN 71: Part 3: 1994",
+            "name": "safety_of_toys_standard_of_en_71:_part_3:_1994",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Go to URL and search on CAS no.\r\nhttps:\/\/eur-lex.europa.eu\/legal-content\/EN\/TXT\/PDF\/?uri=CELEX:32009L0048&from=EN\r\nIf the CAS no is not listed it is compliant!",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Compliant (not listed)": "Compliant (not listed)",
+                "Not compliant (listed)": "Not compliant (listed)"
+            },
+            "default_value": false,
+            "allow_null": 1,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "products"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1698668355
+}

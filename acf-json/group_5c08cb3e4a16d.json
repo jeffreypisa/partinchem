@@ -1,0 +1,314 @@
+{
+    "key": "group_5c08cb3e4a16d",
+    "title": "Contact Page",
+    "fields": [
+        {
+            "key": "field_5c08cb447ae17",
+            "label": "Background Image",
+            "name": "contact-bg",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "wpml_cf_preferences": 1
+        },
+        {
+            "key": "field_5c08cb7b7ae18",
+            "label": "Blocks",
+            "name": "contact-box",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "Add block",
+            "rows_per_page": 20,
+            "wpml_cf_preferences": 1,
+            "sub_fields": [
+                {
+                    "key": "field_5c08cb997ae19",
+                    "label": "Column 1",
+                    "name": "column_1",
+                    "aria-label": "",
+                    "type": "column",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "column-type": "1_2",
+                    "parent_repeater": "field_5c08cb7b7ae18",
+                    "wpml_cf_preferences": 2
+                },
+                {
+                    "key": "field_5c08cbf37ae1a",
+                    "label": "City",
+                    "name": "contact-city",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "parent_repeater": "field_5c08cb7b7ae18",
+                    "wpml_cf_preferences": 2
+                },
+                {
+                    "key": "field_5c08cc1d7ae1b",
+                    "label": "Country",
+                    "name": "contact-country",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "parent_repeater": "field_5c08cb7b7ae18",
+                    "wpml_cf_preferences": 2
+                },
+                {
+                    "key": "field_5c08cc547ae1e",
+                    "label": "Address",
+                    "name": "contact-address",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 3,
+                    "new_lines": "br",
+                    "parent_repeater": "field_5c08cb7b7ae18",
+                    "wpml_cf_preferences": 2
+                },
+                {
+                    "key": "field_5c08cc8a7ae1f",
+                    "label": "Phone",
+                    "name": "contact-phone",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "parent_repeater": "field_5c08cb7b7ae18",
+                    "wpml_cf_preferences": 2
+                },
+                {
+                    "key": "field_5c08cc9a7ae20",
+                    "label": "Email",
+                    "name": "contact-email",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "parent_repeater": "field_5c08cb7b7ae18",
+                    "wpml_cf_preferences": 2
+                },
+                {
+                    "key": "field_5c08cc2e7ae1c",
+                    "label": "Column 2",
+                    "name": "_copy",
+                    "aria-label": "",
+                    "type": "column",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "column-type": "1_2",
+                    "parent_repeater": "field_5c08cb7b7ae18",
+                    "wpml_cf_preferences": 2
+                },
+                {
+                    "key": "field_5c08ccd27ae21",
+                    "label": "Modal Image",
+                    "name": "contact-img",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "url",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "parent_repeater": "field_5c08cb7b7ae18",
+                    "wpml_cf_preferences": 1
+                },
+                {
+                    "key": "field_5c08cd117ae22",
+                    "label": "Modal Title",
+                    "name": "contact-title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "parent_repeater": "field_5c08cb7b7ae18",
+                    "wpml_cf_preferences": 2
+                },
+                {
+                    "key": "field_5c08cd357ae23",
+                    "label": "Modal  Announcement",
+                    "name": "contact-anons",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 4,
+                    "new_lines": "",
+                    "parent_repeater": "field_5c08cb7b7ae18",
+                    "wpml_cf_preferences": 2
+                },
+                {
+                    "key": "field_5c08cd947ae24",
+                    "label": "Modal  Text",
+                    "name": "contact-text",
+                    "aria-label": "",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "basic",
+                    "media_upload": 0,
+                    "delay": 0,
+                    "parent_repeater": "field_5c08cb7b7ae18",
+                    "wpml_cf_preferences": 2
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "contacts.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1702930931
+}
